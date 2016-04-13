@@ -1,0 +1,29 @@
+<Solution>
+  <PropertyGroup Name="NightmareFacade" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="Assets">
+          <Image Name="CloudL.png" />
+          <Image Name="CloudM.png" />
+          <Image Name="CloudS.png" />
+          <TTF Name="contrast.ttf" />
+          <Image Name="crowbar.png" />
+          <Image Name="downarrow.png" />
+          <Image Name="leftarrow.png" />
+          <Image Name="Menu Char.png" />
+          <Image Name="Menu.png" />
+          <TTF Name="PermanentMarker.ttf" />
+          <TTF Name="RockSalt.ttf" />
+          <Image Name="Room 1.png" />
+          <Image Name="Splash Layout copy.png" />
+          <TTF Name="WalterTurncoat.ttf" />
+          <Image Name="DetectiveWalk2.png" />
+        </Folder>
+        <Project Name="BasementRoom1.csd" Type="Scene" />
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="MenuScene.csd" Type="Scene" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
