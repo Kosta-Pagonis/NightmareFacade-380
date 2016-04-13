@@ -34,7 +34,7 @@ bool NFMenu::init()
 		return false;
 	}
 
-	//lua stuff
+	//lua stuff testing
 	// Init Lua
 	LuaState* luaPState = LuaState::Create();
 	//Until the lua file is closed, any changes we make to the lua file should stay.
@@ -75,6 +75,8 @@ bool NFMenu::init()
 	LuaFunction<void> shiftInventoryLeft = luaPState->GetGlobal("shiftInventoryLeft"); //Shifts the inventory to the left.
 	shiftInventoryLeft(); //Moves the pointer left until it finds a non negative-1 value.
 	shiftInventoryRight(); //Moves the pointer right until it finds a non negative-1 value.
+
+	LuaState::Destroy(luaPState); //Close lua file.
 	//end of lua stuff 
 
 	//load the csb
