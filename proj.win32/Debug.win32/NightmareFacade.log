@@ -1,12 +1,3 @@
-﻿  AppDelegate.cpp
-  BasementRoom1.cpp
-  HelloWorldScene.cpp
-  MenuScene.cpp
-  main.cpp
-c:\users\spartanrme\documents\visual studio 2015\projects\nightmarefacade\classes\appdelegate.cpp(40): warning C4305: 'argument': truncation from 'double' to 'float'
-  File not found - *.*
+﻿  60 File(s) copied
+  NightmareFacade.vcxproj -> C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\proj.win32\Debug.win32\NightmareFacade.exe
   0 File(s) copied
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(128,5): error MSB3073: The command "if not exist "C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\proj.win32\Debug.win32\" mkdir "C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\proj.win32\Debug.win32\"
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(128,5): error MSB3073: xcopy /Y /Q "\cocos2d-x-3.10\prebuilt\win32\*.*" "C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\proj.win32\Debug.win32\"
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(128,5): error MSB3073: 
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(128,5): error MSB3073: :VCEnd" exited with code 4.
