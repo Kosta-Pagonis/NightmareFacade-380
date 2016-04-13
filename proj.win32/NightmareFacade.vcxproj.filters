@@ -10,6 +10,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LuaScripts">
+      <UniqueIdentifier>{c300cd22-3bbd-40f6-9531-a4934247782a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -25,6 +28,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\BasementRoom1.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Apps\LuaExample\LuaMathExample\LuaMathExample.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -49,5 +55,10 @@
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Apps\LuaExample\Apps\LuaMathExample\stats.lua">
+      <Filter>LuaScripts</Filter>
+    </None>
   </ItemGroup>
 </Project>

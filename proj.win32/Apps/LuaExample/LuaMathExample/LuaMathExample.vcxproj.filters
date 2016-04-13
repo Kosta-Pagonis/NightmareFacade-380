@@ -6,7 +6,11 @@
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="LuaScripts">
+<<<<<<< HEAD
+      <UniqueIdentifier>{d2602cef-efaa-40c8-88c9-ae7228ab5587}</UniqueIdentifier>
+=======
       <UniqueIdentifier>{5d3af8d1-0d74-4f35-85fe-8ba4e110bdba}</UniqueIdentifier>
+>>>>>>> refs/remotes/origin/master
     </Filter>
   </ItemGroup>
   <ItemGroup>

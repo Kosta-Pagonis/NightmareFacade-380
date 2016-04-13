@@ -2,6 +2,10 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "BasementRoom1.h"
+#include "LuaPlus.h"
+using namespace LuaPlus;
+#include "stdio.h"
+using namespace std;
 
 USING_NS_CC;
 
@@ -29,6 +33,49 @@ bool NFMenu::init()
 	{
 		return false;
 	}
+
+	//lua stuff
+	// Init Lua
+	LuaState* luaPState = LuaState::Create();
+	//Until the lua file is closed, any changes we make to the lua file should stay.
+	//When the lua file is closed, any changes made should revert to their original values.
+
+	// Open the Lua Script File
+	int result = luaPState->DoFile("stats.lua");
+
+
+	// Get the current sanity and current light.
+	LuaFunction<int> getCurSanity = luaPState->GetGlobal("getCurSanity"); //getCurSanity returns an int.
+	int sanity = getCurSanity();
+	LuaFunction<int> getCurLight = luaPState->GetGlobal("getCurLight"); //getCurLight returns an int.
+	int light = getCurLight();
+
+	//These don't print to the console properly, but nevertheless are correctly calculated.
+
+	// Let's call the stats.lua's decSanityByAmount function
+	LuaFunction<float> decSanityByAmount = luaPState->GetGlobal("decSanityByAmount");
+	sanity = decSanityByAmount(50); //Sanity is now 50.
+	sanity = decSanityByAmount(50); //Sanity is now 0.
+									//Restore sanity
+	LuaFunction<void> restoreSanityToMax = luaPState->GetGlobal("restoreSanityToMax");
+	restoreSanityToMax(); //Sanity is now 100.
+	sanity = getCurSanity(); //Get the current sanity.
+	//100
+
+	//Let's decrease the light and sanity through the decLightByOne fucntion
+	LuaFunction<void> decLightByOne = luaPState->GetGlobal("decLightByOne"); //Decreases the light by 1, and by extension the sanity by 1.
+	decLightByOne();
+	light = getCurLight(); //99
+	sanity = getCurSanity(); //99
+	//These don't print to the console properly, but nevertheless are correctly calculated.
+
+	//Let's print out the currently held item from the inventory.
+	LuaFunction<int> getHeldItem = luaPState->GetGlobal("getHeldItem");  //Returns an int.
+	LuaFunction<void> shiftInventoryRight = luaPState->GetGlobal("shiftInventoryRight"); //Shifts the inventory to the right.
+	LuaFunction<void> shiftInventoryLeft = luaPState->GetGlobal("shiftInventoryLeft"); //Shifts the inventory to the left.
+	shiftInventoryLeft(); //Moves the pointer left until it finds a non negative-1 value.
+	shiftInventoryRight(); //Moves the pointer right until it finds a non negative-1 value.
+	//end of lua stuff 
 
 	//load the csb
 	auto rootNode = CSLoader::createNode("MenuScene.csb");
@@ -126,5 +173,6 @@ void NFMenu::update(float delta) {
 		quit->setOpacity(100);
 		quitLit = false;
 	}
+
 
 }
