@@ -1,0 +1,12 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="rightPlist" Type="Plist" ID="5360877e-8848-400b-aa21-5e5e177713ce" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Assets/animations/right1.png" />
+      <FilePathData Path="Assets/animations/right2.png" />
+      <FilePathData Path="Assets/animations/right3.png" />
+      <FilePathData Path="Assets/animations/right4.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

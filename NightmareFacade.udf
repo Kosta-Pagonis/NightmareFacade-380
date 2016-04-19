@@ -31,9 +31,12 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="BasementRoom1.csd" />
+          <FilePathData Path="MenuScene.csd" />
+          <FilePathData Path="Assets/animations/rightPlist.csi" />
+          <FilePathData Path="rightAnimMenu.csd" />
+          <FilePathData Path="leftAnimMenu.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="BasementRoom1.csd" />
+        <ActiveDocument Path="MenuScene.csd" />
       </Value>
     </Item>
   </Properties>
