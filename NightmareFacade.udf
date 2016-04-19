@@ -35,6 +35,9 @@
           <FilePathData Path="Assets/animations/rightPlist.csi" />
           <FilePathData Path="rightAnimMenu.csd" />
           <FilePathData Path="leftAnimMenu.csd" />
+          <FilePathData Path="Assets/animations/Plist.csi" />
+          <FilePathData Path="Assets/animations/idlePlist.csi" />
+          <FilePathData Path="idleAnimMenu.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="MenuScene.csd" />
       </Value>

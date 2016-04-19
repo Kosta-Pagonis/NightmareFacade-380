@@ -41,7 +41,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="MarkedSubImage" Path="Assets/animations/idle4.png" Plist="Assets/animations/idlePlist.plist" />
+            <FileData Type="MarkedSubImage" Path="Assets/animations/idle1.png" Plist="Assets/animations/idlePlist.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>

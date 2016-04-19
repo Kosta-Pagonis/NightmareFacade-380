@@ -24,6 +24,8 @@
             <Image Name="right3.png" />
             <Image Name="right4.png" />
             <PlistInfo Name="rightPlist.csi" Type="Plist" />
+            <PlistInfo Name="Plist.csi" Type="Plist" />
+            <Folder Name="NewFolder" />
           </Folder>
           <Image Name="bedPic.png" />
           <Image Name="CloudL.png" />

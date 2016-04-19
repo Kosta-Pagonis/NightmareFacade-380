@@ -198,7 +198,7 @@ bool NFMenu::init()
 	b2Vec2(1000 / PTM_RATIO, 0));
 	_groundBody->CreateFixture(&groundBoxDef);
 
-	//Creates body for Sprite
+	//Creates body for Sprite and objects
 	addBoxBodyForSprite(sprite);
 	addBoxBodyForStatic(bed, bedBody);
 	addBoxBodyForStatic(desk, deskBody);
@@ -216,12 +216,13 @@ bool NFMenu::init()
 	world->SetDebugDraw(m_debugDraw);
 
 
-	
+	//animation opacities for now
 	leftAnim->setOpacity(255);
 	idleAnim->setOpacity(255);
 	rightAnim->setOpacity(255);
 	sprite->setOpacity(255); 
 
+	//running animations from cocos studio
 	cocostudio::timeline::ActionTimeline *timeLine = CSLoader::createTimeline("idleAnimMenu.csb");
 	timeLine->retain(); //released later on
 	idleAnim->runAction(timeLine);
@@ -241,7 +242,7 @@ bool NFMenu::init()
 	
 
 
-	auto eventListener = EventListenerKeyboard::create();
+auto eventListener = EventListenerKeyboard::create();
 
 eventListener->onKeyPressed = [this](EventKeyboard::KeyCode keyCode, Event* event) {
 
@@ -328,29 +329,6 @@ void NFMenu::update(float delta) {
 			rightAnim->setOpacity(0);
 			sprite->setOpacity(0);
         }
-		/*
-		if (position.x >= 0 && position.x < 290) {
-			play->setOpacity(255);
-			playLit = true;
-		}
-		else if (position.x > 405 && position.x < 640) {
-			help->setOpacity(255);
-			helpLit = true;
-		}
-		else if (position.x > 770 && position.x < 1000) {
-			quit->setOpacity(255);
-			quitLit = true;
-		}
-		else {
-			play->setOpacity(100);
-			playLit = false;
-			help->setOpacity(100);
-			helpLit = false;
-			quit->setOpacity(100);
-			quitLit = false;
-		}
 		
-	
-	*/
 }
 
