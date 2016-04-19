@@ -1,0 +1,16 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="idlePlist" Type="Plist" ID="eb94af54-2716-4a34-a03f-fd8f71877634" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Assets/animations/idle1.png" />
+      <FilePathData Path="Assets/animations/idle2.png" />
+      <FilePathData Path="Assets/animations/idle3.png" />
+      <FilePathData Path="Assets/animations/idle4.png" />
+      <FilePathData Path="Assets/animations/idle5.png" />
+      <FilePathData Path="Assets/animations/idle6.png" />
+      <FilePathData Path="Assets/animations/idle7.png" />
+      <FilePathData Path="Assets/animations/idle8.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>
