@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Assets/animations/right1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,766},{228,532}}</string>
+				<key>offset</key>
+				<string>{29,12}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1000,600}</string>
+			</dict>
+			<key>Assets/animations/right2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,538},{228,533}}</string>
+				<key>offset</key>
+				<string>{29,12}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1000,600}</string>
+			</dict>
+			<key>Assets/animations/right3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{228,0},{228,530}}</string>
+				<key>offset</key>
+				<string>{29,13}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1000,600}</string>
+			</dict>
+			<key>Assets/animations/right4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{228,538}}</string>
+				<key>offset</key>
+				<string>{29,9}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1000,600}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>rightPlist.png</string>
+			<key>realTextureFileName</key>
+			<string>rightPlist.png</string>
+			<key>size</key>
+			<string>{533,994}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>533</integer>
+			<key>height</key>
+			<integer>994</integer>
+		</dict>
+	</dict>
+</plist>

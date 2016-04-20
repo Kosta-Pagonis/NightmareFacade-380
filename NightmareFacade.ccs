@@ -4,11 +4,38 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="Assets">
+          <Folder Name="animations">
+            <Image Name="idle1.png" />
+            <Image Name="idle2.png" />
+            <Image Name="idle3.png" />
+            <Image Name="idle4.png" />
+            <Image Name="idle5.png" />
+            <Image Name="idle6.png" />
+            <Image Name="idle7.png" />
+            <Image Name="idle8.png" />
+            <PlistInfo Name="idlePlist.csi" Type="Plist" />
+            <Image Name="left1.png" />
+            <Image Name="left2.png" />
+            <Image Name="left3.png" />
+            <Image Name="left4.png" />
+            <PlistInfo Name="leftPlist.csi" Type="Plist" />
+            <Image Name="right1.png" />
+            <Image Name="right2.png" />
+            <Image Name="right3.png" />
+            <Image Name="right4.png" />
+            <PlistInfo Name="rightPlist.csi" Type="Plist" />
+            <PlistInfo Name="Plist.csi" Type="Plist" />
+            <Folder Name="NewFolder" />
+          </Folder>
+          <Image Name="bedPic.png" />
           <Image Name="CloudL.png" />
           <Image Name="CloudM.png" />
           <Image Name="CloudS.png" />
           <TTF Name="contrast.ttf" />
           <Image Name="crowbar.png" />
+          <Image Name="deskPic.png" />
+          <Image Name="DetectiveWalk2.png" />
+          <Image Name="doorPic.png" />
           <Image Name="downarrow.png" />
           <Image Name="leftarrow.png" />
           <Image Name="Menu Char.png" />
@@ -18,11 +45,13 @@
           <Image Name="Room 1.png" />
           <Image Name="Splash Layout copy.png" />
           <TTF Name="WalterTurncoat.ttf" />
-          <Image Name="DetectiveWalk2.png" />
         </Folder>
         <Project Name="BasementRoom1.csd" Type="Scene" />
+        <Project Name="idleAnimMenu.csd" Type="Node" />
+        <Project Name="leftAnimMenu.csd" Type="Node" />
         <Project Name="MainScene.csd" Type="Scene" />
         <Project Name="MenuScene.csd" Type="Scene" />
+        <Project Name="rightAnimMenu.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>
