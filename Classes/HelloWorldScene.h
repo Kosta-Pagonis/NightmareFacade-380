@@ -1,8 +1,6 @@
 #pragma once
 
 #include "cocos2d.h"
-#include "SimpleAudioEngine.h"
-
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -16,11 +14,4 @@ public:
     // implement the "static create()" method manually
 	virtual void onMouseUp(cocos2d::Event*);
     CREATE_FUNC(HelloWorld);
-
-private:
-	
-
-
-	
-
 };

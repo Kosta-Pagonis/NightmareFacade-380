@@ -33,9 +33,6 @@
     <ClCompile Include="Apps\LuaExample\LuaMathExample\LuaMathExample.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\GLES-Render.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -51,9 +48,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\BasementRoom1.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\GLES-Render.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
