@@ -17,43 +17,43 @@
             <FileData Type="Normal" Path="Assets/Splash Layout copy.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="smallcloud1" ActionTag="-629345475" Tag="19" IconVisible="False" LeftMargin="718.1364" RightMargin="224.8636" TopMargin="35.2543" BottomMargin="530.7457" ctype="SpriteObjectData">
+          <AbstractNodeData Name="smallcloud1" ActionTag="-629345475" Tag="19" IconVisible="False" LeftMargin="769.0507" RightMargin="173.9493" TopMargin="48.2599" BottomMargin="517.7401" ctype="SpriteObjectData">
             <Size X="57.0000" Y="34.0000" />
-            <AnchorPoint ScaleX="0.4870" ScaleY="0.4089" />
-            <Position X="745.8964" Y="544.6469" />
-            <Scale ScaleX="2.4441" ScaleY="2.5633" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="797.5507" Y="534.7401" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7459" Y="0.9077" />
+            <PrePosition X="0.7976" Y="0.8912" />
             <PreSize X="0.0570" Y="0.0567" />
             <FileData Type="Normal" Path="Assets/CloudS.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="largecloud" ActionTag="-816318280" Tag="21" IconVisible="False" LeftMargin="817.8513" RightMargin="25.1487" TopMargin="119.5644" BottomMargin="417.4356" ctype="SpriteObjectData">
+          <AbstractNodeData Name="largecloud" ActionTag="-816318280" Tag="21" IconVisible="False" LeftMargin="705.1680" RightMargin="137.8320" TopMargin="63.2316" BottomMargin="473.7685" ctype="SpriteObjectData">
             <Size X="157.0000" Y="63.0000" />
             <AnchorPoint ScaleX="0.4705" ScaleY="0.4895" />
-            <Position X="891.7198" Y="448.2741" />
-            <Scale ScaleX="1.1760" ScaleY="1.7730" />
+            <Position X="779.0299" Y="504.6074" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8917" Y="0.7471" />
+            <PrePosition X="0.7790" Y="0.8410" />
             <PreSize X="0.1570" Y="0.1050" />
             <FileData Type="Normal" Path="Assets/CloudL.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="smallcloud2" ActionTag="-98883321" Tag="22" RotationSkewX="0.2200" RotationSkewY="0.2234" IconVisible="False" LeftMargin="907.5448" RightMargin="35.4552" TopMargin="14.6862" BottomMargin="551.3138" ctype="SpriteObjectData">
+          <AbstractNodeData Name="smallcloud2" ActionTag="-98883321" Tag="22" IconVisible="False" LeftMargin="805.6870" RightMargin="137.3130" TopMargin="53.6941" BottomMargin="512.3059" ctype="SpriteObjectData">
             <Size X="57.0000" Y="34.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="936.0448" Y="568.3138" />
-            <Scale ScaleX="1.7223" ScaleY="1.7011" />
+            <Position X="834.1870" Y="529.3059" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9360" Y="0.9472" />
+            <PrePosition X="0.8342" Y="0.8822" />
             <PreSize X="0.0570" Y="0.0567" />
             <FileData Type="Normal" Path="Assets/CloudS.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="title" ActionTag="1141670665" Tag="21" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="150.9000" RightMargin="148.1000" TopMargin="10.5000" BottomMargin="466.5000" FontSize="80" LabelText="nightmare Facade" OutlineSize="3" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="title" ActionTag="1141670665" Tag="21" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="150.9253" RightMargin="148.0747" TopMargin="10.5000" BottomMargin="466.5000" FontSize="80" LabelText="nightmare Facade" OutlineSize="3" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="701.0000" Y="123.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="501.4000" Y="528.0000" />
+            <Position X="501.4253" Y="528.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5014" Y="0.8800" />
@@ -61,17 +61,6 @@
             <FontResource Type="Normal" Path="Assets/PermanentMarker.ttf" Plist="" />
             <OutlineColor A="255" R="0" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Particle_1" ActionTag="1829138522" Tag="24" RotationSkewX="88.3519" RotationSkewY="88.3560" IconVisible="True" LeftMargin="547.6449" RightMargin="452.3551" TopMargin="353.2978" BottomMargin="246.7022" ctype="ParticleObjectData">
-            <Size X="0.0000" Y="0.0000" />
-            <AnchorPoint />
-            <Position X="547.6449" Y="246.7022" />
-            <Scale ScaleX="0.3659" ScaleY="0.2488" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5476" Y="0.4112" />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Default" Path="Default/defaultParticle.plist" Plist="" />
-            <BlendFunc Src="775" Dst="1" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

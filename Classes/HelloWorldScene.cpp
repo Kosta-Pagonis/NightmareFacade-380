@@ -2,7 +2,6 @@
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "MenuScene.h"
-#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -30,20 +29,13 @@ bool HelloWorld::init()
     {
         return false;
     }
-	
-	auto audio = CocosDenshion::SimpleAudioEngine::getInstance();
-	audio->playBackgroundMusic("splashsound.wav");
-	
-	
-
+    
     auto rootNode = CSLoader::createNode("MainScene.csb");
-	FadeIn* fadeIn = FadeIn::create(5.0f);
-	rootNode->getChildByName("title")->setOpacity(0);
-	rootNode->getChildByName("title")->runAction(fadeIn);
+
 	//Move the clouds
-	auto sc1MoveTo = MoveTo::create(25, Vec2(70, 537));
-	auto sc2MoveTo = MoveTo::create(27, Vec2(144, 534));
-	auto lcMoveTo = MoveTo::create(30, Vec2(103, 486));
+	auto sc1MoveTo = MoveTo::create(5, Vec2(70, 537));
+	auto sc2MoveTo = MoveTo::create(5, Vec2(144, 534));
+	auto lcMoveTo = MoveTo::create(5, Vec2(103, 486));
 	rootNode->getChildByName("smallcloud1")->runAction(sc1MoveTo);
 	rootNode->getChildByName("smallcloud2")->runAction(sc2MoveTo);
 	rootNode->getChildByName("largecloud")->runAction(lcMoveTo);
@@ -53,7 +45,7 @@ bool HelloWorld::init()
 	mouseListener->onMouseUp = CC_CALLBACK_1(HelloWorld::onMouseUp, this);
 	_eventDispatcher->addEventListenerWithFixedPriority(mouseListener, 1);
 
-	
+
     addChild(rootNode);
 
     return true;
@@ -64,7 +56,4 @@ void HelloWorld::onMouseUp(Event* event)
 	_eventDispatcher->removeAllEventListeners();
 	auto scene = NFMenu::createScene();
 	Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
-	auto audio = CocosDenshion::SimpleAudioEngine::getInstance();
-	
-	audio->pauseBackgroundMusic();
 }
