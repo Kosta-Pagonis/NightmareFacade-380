@@ -63,7 +63,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Apps\LuaExample\Apps\LuaMathExample\stats.lua">
+    <None Include="..\Resources\stats.lua">
       <Filter>LuaScripts</Filter>
     </None>
   </ItemGroup>

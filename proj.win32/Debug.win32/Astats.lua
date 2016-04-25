@@ -68,13 +68,11 @@ end
 --Adds an item to the inventory. The function looks for the first -1 value and replaces it with the 
 --item's id, "item"
 function addItem(item)
-    i = 1
-    while(i < inventorySize) do
+    for i = 1, inventorySize, 1
         if(inventory[i] == -1) then
             inventory[i] = item
-            i = inventorySize
+            return
         end
-		i = i + 1
     end
 end
 
@@ -85,7 +83,7 @@ end
 
 --Moves the pointer to the left of the array until a non negative-1 value is found.
 function shiftInventoryLeft()
-	temp = inventoryPointer
+	local temp = inventoryPointer
     inventoryPointer = inventoryPointer - 1
     if(inventoryPointer <= 0) then
         inventoryPointer = inventorySize
@@ -103,7 +101,7 @@ end
 
 --Moves the pointer to the right of the array until a non negative-1 value is found.
 function shiftInventoryRight()
-	temp = inventoryPointer
+	local temp = inventoryPointer
     inventoryPointer = inventoryPointer + 1
     if(inventoryPointer > inventorySize) then
         inventoryPointer = 1
