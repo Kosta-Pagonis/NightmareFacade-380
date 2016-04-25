@@ -169,12 +169,12 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ResourceCompile Include="game.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Apps\LuaExample\Apps\LuaMathExample\stats.lua" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="Apps\LuaExample\LuaPlusFramework\LuaPlusFramework.vcxproj">
       <Project>{afcbe206-93cd-4f56-9579-c2ed194064f7}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Apps\LuaExample\Apps\LuaMathExample\stats.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

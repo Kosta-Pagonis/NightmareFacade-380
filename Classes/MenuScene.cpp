@@ -269,7 +269,7 @@ eventListener->onKeyReleased = [this](EventKeyboard::KeyCode keyCode, Event* eve
 	case EventKeyboard::KeyCode::KEY_SPACE:
 		if (playLit) {
 			_eventDispatcher->removeAllEventListeners();
-			auto scene = BasementR1::createScene();
+			auto scene = Basement::createScene();
 			Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 		}
 		if (helpLit) {

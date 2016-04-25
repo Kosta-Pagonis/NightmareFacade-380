@@ -5,7 +5,7 @@ curSanity = 100 --The current amount of sanity.
 maxLight = 100 --The maximum amount of light.
 curLight = 100 --The current amount of light.
 
-inventory = {-1,1,-1,2,-1} --We will store items using a numerical ID system. If a slot in the array does not hold an item, the value
+inventory = {-1,-1,-1,-1,-1} --We will store items using a numerical ID system. If a slot in the array does not hold an item, the value
 						   --Should be -1.
 inventoryPointer = 1       --We will use a pointer to point to the currently held item.
 inventorySize =	5		   --A helper variable for moving around the pointer.
@@ -74,6 +74,7 @@ function addItem(item)
             inventory[i] = item
             i = inventorySize
         end
+		i = i + 1
     end
 end
 
@@ -84,6 +85,7 @@ end
 
 --Moves the pointer to the left of the array until a non negative-1 value is found.
 function shiftInventoryLeft()
+	temp = inventoryPointer
     inventoryPointer = inventoryPointer - 1
     if(inventoryPointer <= 0) then
         inventoryPointer = inventorySize
@@ -93,11 +95,15 @@ function shiftInventoryLeft()
         if(inventoryPointer <= 0) then
             inventoryPointer = inventorySize
         end
+		if(inventoryPointer == temp) then
+			return
+		end
     end
 end
 
 --Moves the pointer to the right of the array until a non negative-1 value is found.
 function shiftInventoryRight()
+	temp = inventoryPointer
     inventoryPointer = inventoryPointer + 1
     if(inventoryPointer > inventorySize) then
         inventoryPointer = 1
@@ -107,6 +113,9 @@ function shiftInventoryRight()
         if(inventoryPointer > inventorySize) then
             inventoryPointer = 1
         end
+		if(inventoryPointer == temp) then
+			return 
+		end
     end
 end
 
