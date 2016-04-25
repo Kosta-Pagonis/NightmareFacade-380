@@ -444,7 +444,7 @@ bool Basement::init()
 
 	this->_eventDispatcher->addEventListenerWithSceneGraphPriority(eventListener, sprite);
 	
-	rootNode->setOpacity(200);
+	rootNode->setOpacity(255);
 
 	//FOR INVENTORY ITEMS DISREGARD... FIRST ONE
 	display = cocos2d::Sprite::create("glass.png");
