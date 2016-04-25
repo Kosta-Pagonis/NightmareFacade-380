@@ -19,13 +19,12 @@
             <Image Name="left3.png" />
             <Image Name="left4.png" />
             <PlistInfo Name="leftPlist.csi" Type="Plist" />
+            <PlistInfo Name="Plist.csi" Type="Plist" />
             <Image Name="right1.png" />
             <Image Name="right2.png" />
             <Image Name="right3.png" />
             <Image Name="right4.png" />
             <PlistInfo Name="rightPlist.csi" Type="Plist" />
-            <PlistInfo Name="Plist.csi" Type="Plist" />
-            <Folder Name="NewFolder" />
           </Folder>
           <Image Name="bedPic.png" />
           <Image Name="CloudL.png" />
@@ -45,12 +44,46 @@
           <Image Name="Room 1.png" />
           <Image Name="Splash Layout copy.png" />
           <TTF Name="WalterTurncoat.ttf" />
+          <Folder Name="level1">
+            <Folder Name="animations">
+              <Image Name="DetectiveArm1.png" />
+              <Image Name="DetectiveArm2.png" />
+              <Image Name="DetectiveArm3.png" />
+              <Image Name="DetectiveArm4.png" />
+              <Image Name="DetectiveIdle1.png" />
+              <Image Name="DetectiveIdle2.png" />
+              <Image Name="DetectiveWalk1.png" />
+              <Image Name="DetectiveWalk2.png" />
+              <Image Name="DetectiveWalk3.png" />
+              <Image Name="DetectiveWalk4.png" />
+              <PlistInfo Name="detectiveIdle.csi" Type="Plist" />
+              <PlistInfo Name="detectiveWalk.csi" Type="Plist" />
+              <PlistInfo Name="detectiveSwing.csi" Type="Plist" />
+            </Folder>
+            <Image Name="axe.png" />
+            <Image Name="bottle.png" />
+            <Image Name="cloth.png" />
+            <Image Name="crobar.png" />
+            <Image Name="downArrow.png" />
+            <Image Name="gascan.png" />
+            <Image Name="glass.png" />
+            <Image Name="key.png" />
+            <Image Name="keyinglass.png" />
+            <Image Name="Level 1 All Rooms.png" />
+            <Image Name="Level11.png" />
+            <Image Name="lightSource.png" />
+            <Image Name="logs.png" />
+          </Folder>
         </Folder>
         <Project Name="BasementRoom1.csd" Type="Scene" />
+        <Project Name="detectiveIdle.csd" Type="Node" />
+        <Project Name="detectiveSwing.csd" Type="Node" />
+        <Project Name="detectiveWalk.csd" Type="Node" />
         <Project Name="idleAnimMenu.csd" Type="Node" />
         <Project Name="leftAnimMenu.csd" Type="Node" />
         <Project Name="MainScene.csd" Type="Scene" />
         <Project Name="MenuScene.csd" Type="Scene" />
+        <PlistParticleFile Name="particle_texture.plist" />
         <Project Name="rightAnimMenu.csd" Type="Node" />
       </RootFolder>
     </Group>

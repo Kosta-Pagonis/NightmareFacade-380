@@ -11,7 +11,7 @@
         <iOS_Target Value="NightmareFacade-mobile" />
         <iOS_BundleID Value="" />
         <Platform Value="None" />
-        <RunPlatform Value="None" />
+        <RunPlatform Value="Windows" />
         <FrameworkVersion Value="cocos2d-x-3.10" />
         <IsDebugKeystore Value="True" />
         <KeystorePassword Value="" />
@@ -26,20 +26,6 @@
         <LastPublishType Value="VS" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Windows" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="MenuScene.csd" />
-          <FilePathData Path="Assets/animations/rightPlist.csi" />
-          <FilePathData Path="rightAnimMenu.csd" />
-          <FilePathData Path="leftAnimMenu.csd" />
-          <FilePathData Path="Assets/animations/Plist.csi" />
-          <FilePathData Path="Assets/animations/idlePlist.csi" />
-          <FilePathData Path="idleAnimMenu.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="MenuScene.csd" />
       </Value>
     </Item>
   </Properties>
