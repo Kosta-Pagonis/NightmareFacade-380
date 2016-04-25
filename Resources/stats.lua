@@ -72,7 +72,18 @@ function addItem(item)
     while(i <= inventorySize) do
         if(inventory[i] == -1) then
             inventory[i] = item
-            i = inventorySize
+            return
+        end
+		i = i+1
+    end
+end
+
+function removeItem(item)
+    local i = 1
+    while(i <= inventorySize) do
+        if(inventory[i] == item) then
+            inventory[i] = -1
+            return
         end
 		i = i+1
     end
