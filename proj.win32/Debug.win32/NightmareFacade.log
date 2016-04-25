@@ -1,6 +1,5 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(367,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   60 File(s) copied
-  NightmareFacade.vcxproj -> C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\proj.win32\Debug.win32\NightmareFacade.exe
-  C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\Resources\stats.lua -> C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\proj.win32\Debug.win32\stats.lua
-  1 File(s) copied
+  NightmareFacade.vcxproj -> C:\Users\Max2729\Source\Repos\NightmareFacade-380\proj.win32\Debug.win32\NightmareFacade.exe
+  0 File(s) copied

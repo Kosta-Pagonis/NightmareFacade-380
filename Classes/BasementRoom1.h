@@ -21,6 +21,8 @@ public:
 	void update(float) override;
 	void addBoxBodyForSprite(Node* sprite);
 	void addBoxBodyForStatic(Node * sprite, b2Body * body);
+	void addBoxBodyForDynamicBottle(Node * sprite);
+	void addBoxBodyForKey(Node * sprite);
 	void addBoxBodyForStaticNonWall(Node * sprite, b2Body * body);
 	void tick();
 
@@ -39,6 +41,8 @@ private:
 	bool invL;
 	bool invR;
 	bool glassBroken = false;
+	bool thrownBottle = false;
+	bool hasKey = false;
 	
 	Node* sprite;
 	
@@ -57,6 +61,7 @@ private:
 	Node* keyBottle;
 	Node* key;
 	Node* gasCan;
+	Node* keyBottleT;
 
 	Node* idleAnim;
 	Node* walkAnim;
@@ -103,16 +108,19 @@ private:
 	b2Body* keyBottleB;
 	b2Body* keyB;
 	b2Body* gasCanB;
+	b2Body* keyBottleBT;
 
 	b2ContactListener *contactListener;
 	b2ContactEdge* edge ;
 	
 	int id ;
+	int opacityBottle = 50;
 	cocos2d::Sprite* display;
 	cocos2d::Sprite* display2;
 	cocos2d::Sprite* display3;
 	cocos2d::Sprite* display4;
 	cocos2d::Sprite* display5;
 	cocos2d::Sprite* display6;
+	cocos2d::Sprite* display7;
 	
 };
