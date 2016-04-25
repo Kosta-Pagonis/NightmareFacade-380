@@ -89,6 +89,10 @@ function removeItem(item)
     end
 end
 
+function removeHeldItem()
+	inventory[inventoryPointer] = -1
+end
+
 --Returns the current value determined by inventoryPointer, the inventory's pointer.
 function getHeldItem()
     return inventory[inventoryPointer] --lua starts indicies at 1
