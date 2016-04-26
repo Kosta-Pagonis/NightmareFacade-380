@@ -289,6 +289,9 @@ void Basement::tick()
 
 				}
 			}
+			else
+				
+				audio->playEffect("knock.wav");
 		}
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == downArrow2)
 		{
@@ -416,18 +419,21 @@ void Basement::tick()
 					removeItem(2);
 					display4->setOpacity(0);
 					gasCanEXP->setOpacity(255);
+					audio->playEffect("ritual.wav");
 				}
 				if (display->getOpacity() > 0)
 				{
 					removeItem(7);
 					logsEXP->setOpacity(255);
 					display->setOpacity(0);
+					audio->playEffect("ritual.wav");
 				}
 				if (display5->getOpacity() > 0)
 				{
 					removeItem(4);
 					bottleT->setOpacity(255);
 					display5->setOpacity(0);
+					audio->playEffect("ritual.wav");
 				}
 
 			}
@@ -439,6 +445,7 @@ void Basement::tick()
 			{
 				kill = true;
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				heal->setVisible(true);
 			}
 		}
 		if (edge->contact->GetFixtureB()->GetBody() != NULL && edge->contact->GetFixtureB()->GetBody()->GetUserData() == enemy)
@@ -446,10 +453,12 @@ void Basement::tick()
 			if (kill)
 			{
 				enemyB->SetLinearVelocity(b2Vec2(0, 0));
-
+				enemyIdle->setOpacity(0);
+				
 			}
 			else
 			{
+				audio->stopAllEffects();
 				auto scene = NFMenu::createScene();
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 			}
@@ -752,7 +761,7 @@ bool Basement::init()
 	this->addChild(display6);
 	this->addChild(display7);
 
-
+	
 	this->scheduleUpdate();
 
 
@@ -792,8 +801,12 @@ void Basement::update(float delta) {
 			
 	}
 	if (kill == true)
+	{
 		heal->setVisible(true);
-	
+		explosion->setVisible(false);
+		explosionFire->setVisible(false);
+		
+	}
 
 	id = getHeldItem();  // displays depending on invetory item
 	if (id == 1)
@@ -930,7 +943,7 @@ void Basement::update(float delta) {
 
 	if (!((charMovingLeft && charMovingRight) || (!charMovingLeft && !charMovingRight))) {
 		if (charMovingLeft) {
-
+			//audio->playEffect("footsteps.wav");
 			spriteBody->SetLinearVelocity(b2Vec2(-4, 0));
 			walkAnim->setOpacity(255);
 			walkAnim->setScaleX(1);
@@ -953,7 +966,7 @@ void Basement::update(float delta) {
 
 		}
 		if (charMovingRight) {
-
+			//audio->playEffect("footsteps.wav");
 			spriteBody->SetLinearVelocity(b2Vec2(4, 0));
 			idleAnim->setOpacity(0);
 			idleAnim->setScaleX(-1);

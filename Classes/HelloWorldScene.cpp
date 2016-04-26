@@ -66,5 +66,5 @@ void HelloWorld::onMouseUp(Event* event)
 	Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 	auto audio = CocosDenshion::SimpleAudioEngine::getInstance();
 	
-	audio->pauseBackgroundMusic();
+	//audio->pauseBackgroundMusic();
 }
