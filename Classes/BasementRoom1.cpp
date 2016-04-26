@@ -709,12 +709,12 @@ bool Basement::init()
 		case EventKeyboard::KeyCode::KEY_SPACE:
 			charSwing = false;
 			break;
-		case EventKeyboard::KeyCode::KEY_Z:
-			invL = false;
-			break;
-		case EventKeyboard::KeyCode::KEY_X:
-			invR = false;
-			break;
+		//case EventKeyboard::KeyCode::KEY_Z:
+			//invL = false;
+			//break;
+		//case EventKeyboard::KeyCode::KEY_X:
+			//invR = false;
+			//break;
 
 		}
 	};
@@ -920,11 +920,12 @@ void Basement::update(float delta) {
 	if (invL)
 	{
 		shiftInventoryLeft();
+		invL = false;
 	}
 	if (invR)
 	{
 		shiftInventoryRight();
-
+		invR = false;
 	}
 
 	if (!((charMovingLeft && charMovingRight) || (!charMovingLeft && !charMovingRight))) {
