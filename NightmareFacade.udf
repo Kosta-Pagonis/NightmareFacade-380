@@ -28,5 +28,14 @@
         <LastRunType Value="Windows" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="BasementRoom1.csd" />
+          <FilePathData Path="enemyIdle.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="BasementRoom1.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

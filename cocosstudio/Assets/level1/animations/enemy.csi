@@ -1,0 +1,12 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="enemy" Type="Plist" ID="8150934b-19ea-4a41-b895-56ad78630e50" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Assets/level1/animations/Enemy1.png" />
+      <FilePathData Path="Assets/level1/animations/Enemy2.png" />
+      <FilePathData Path="Assets/level1/animations/Enemy3.png" />
+      <FilePathData Path="Assets/level1/animations/Enemy4.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>
