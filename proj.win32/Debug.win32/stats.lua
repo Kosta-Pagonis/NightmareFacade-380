@@ -8,7 +8,7 @@ curLight = 100 --The current amount of light.
 inventory = {-1,-1,-1,-1,-1,-1,-1} --We will store items using a numerical ID system. If a slot in the array does not hold an item, the value
 						   --Should be -1.
 inventoryPointer = 1       --We will use a pointer to point to the currently held item.
-inventorySize =	10		   --A helper variable for moving around the pointer.
+inventorySize =	7		   --A helper variable for moving around the pointer.
 
 --Sanity & Light Functions ----------------------------------------------
 --Gets the current Sanity.
