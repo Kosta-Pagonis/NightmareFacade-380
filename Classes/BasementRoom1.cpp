@@ -486,6 +486,8 @@ void Basement::tick()
 				audio->playEffect("scary1.wav");
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				kill = false;
+				audio->stopBackgroundMusic();
+				audio->playBackgroundMusic("ambience.wav");
 				leaveGame = true;
 				
 			}
@@ -864,7 +866,8 @@ void Basement::update(float delta) {
 			//enemyB->SetTransform(enemyP,0);
 			enemyIdle->setOpacity(255);
 			enemyB->SetLinearVelocity(b2Vec2(-5, 0));
-			
+			audio->stopBackgroundMusic();
+			audio->playBackgroundMusic("Horror.wav");
 			win = true;
 			
 	}
@@ -874,6 +877,7 @@ void Basement::update(float delta) {
 		heal->setVisible(true);
 		explosion->setVisible(false);
 		explosionFire->setVisible(false);
+		
 		
 		
 	}
@@ -1014,7 +1018,7 @@ void Basement::update(float delta) {
 	if (!((charMovingLeft && charMovingRight) || (!charMovingLeft && !charMovingRight))) {
 		if (charMovingLeft) {
 			//audio->playEffect("footsteps.wav");
-			spriteBody->SetLinearVelocity(b2Vec2(-4, 0));
+			spriteBody->SetLinearVelocity(b2Vec2(-4.5, 0));
 			walkAnim->setOpacity(255);
 			walkAnim->setScaleX(1);
 			swingAnim->setScaleX(1);
@@ -1024,8 +1028,8 @@ void Basement::update(float delta) {
 			sprite->setOpacity(0);
 			movedL = true;
 			movedR = false;
-			if (charRun)
-				spriteBody->SetLinearVelocity(b2Vec2(-8, 0));
+			//if (charRun)
+			//	spriteBody->SetLinearVelocity(b2Vec2(-8, 0));
 			//if (charSwing)
 			//{
 			//	walkAnim->setOpacity(0);
@@ -1037,7 +1041,7 @@ void Basement::update(float delta) {
 		}
 		if (charMovingRight) {
 			//audio->playEffect("footsteps.wav");
-			spriteBody->SetLinearVelocity(b2Vec2(4, 0));
+			spriteBody->SetLinearVelocity(b2Vec2(4.5, 0));
 			idleAnim->setOpacity(0);
 			idleAnim->setScaleX(-1);
 			sprite->setOpacity(0);
@@ -1048,8 +1052,8 @@ void Basement::update(float delta) {
 
 			movedL = false;
 			movedR = true;
-			if (charRun)
-				spriteBody->SetLinearVelocity(b2Vec2(8, 0));
+			//if (charRun)
+			//	spriteBody->SetLinearVelocity(b2Vec2(8, 0));
 			//if (charSwing)
 			//{
 			//	walkAnim->setOpacity(0);
