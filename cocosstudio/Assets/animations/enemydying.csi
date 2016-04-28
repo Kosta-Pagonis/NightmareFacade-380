@@ -1,0 +1,22 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="enemydying" Type="Plist" ID="0e6026b5-c749-4c52-ab9a-618fff7ab51e" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Assets/animations/EnemyDeath1.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath99.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath999.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath9999.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath99999.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath9999999.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath2.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath3.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath4.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath5.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath6.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath7.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath8.png" />
+      <FilePathData Path="Assets/animations/EnemyDeath9.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

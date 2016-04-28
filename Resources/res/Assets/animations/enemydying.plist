@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Assets/animations/EnemyDeath1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,752},{248,376}}</string>
+				<key>offset</key>
+				<string>{-19,-2}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath99.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{500,252},{271,207}}</string>
+				<key>offset</key>
+				<string>{-12,-86}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath999.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{500,523},{271,207}}</string>
+				<key>offset</key>
+				<string>{-12,-86}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath9999.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{707,252},{263,207}}</string>
+				<key>offset</key>
+				<string>{-16,-86}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath99999.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{771,515},{209,207}}</string>
+				<key>offset</key>
+				<string>{-17,-86}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{250,0},{248,376}}</string>
+				<key>offset</key>
+				<string>{-19,-2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{250,376}}</string>
+				<key>offset</key>
+				<string>{-20,-2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,376},{250,376}}</string>
+				<key>offset</key>
+				<string>{-20,-2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{250,376},{250,367}}</string>
+				<key>offset</key>
+				<string>{-20,-6}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{376,743},{252,296}}</string>
+				<key>offset</key>
+				<string>{-20,-42}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{498,0},{252,231}}</string>
+				<key>offset</key>
+				<string>{-20,-74}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{729,0},{257,207}}</string>
+				<key>offset</key>
+				<string>{-19,-86}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+			<key>Assets/animations/EnemyDeath9.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{672,730},{257,207}}</string>
+				<key>offset</key>
+				<string>{-19,-86}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,380}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>enemydying.png</string>
+			<key>realTextureFileName</key>
+			<string>enemydying.png</string>
+			<key>size</key>
+			<string>{986,1000}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>986</integer>
+			<key>height</key>
+			<integer>1000</integer>
+		</dict>
+	</dict>
+</plist>

@@ -53,7 +53,7 @@ private:
 	bool hasKey = false;
 	bool win = false;
 	bool kill = false;
-
+	bool leaveGame = false;
 	Node* sprite;
 	Node* heal;
 	Node* upArrow;
@@ -63,6 +63,7 @@ private:
 	Node* doorDown;
 	Node* fire;
 	Node* light;
+	Node* enemyDying;
 
 	Node* crowbar;
 	Node* axe;
@@ -96,6 +97,13 @@ private:
 	Node* explosionFire;
 	Node* bottleT;
 	Node* enemyIdle;
+
+	Node* girl1;
+	Node* girl2;
+	Node* girl3;
+
+	Node* leave;
+	b2Body* leaveB;
 
 	Node* enemy;
 	Node* lightWin;

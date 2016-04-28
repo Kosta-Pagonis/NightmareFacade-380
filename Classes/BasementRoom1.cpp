@@ -235,6 +235,7 @@ void Basement::tick()
 	walkAnim->setPosition(sprite->getPosition());
 	swingAnim->setPosition(sprite->getPosition());
 	enemyIdle->setPosition(enemy->getPosition());
+	enemyDying->setPosition(enemy->getPosition());
 	heal->setPosition(sprite->getPosition());
 	for (b2Body *b = world->GetBodyList(); b; b = b->GetNext()) {
 		if (b->GetUserData() != NULL) {
@@ -316,6 +317,7 @@ void Basement::tick()
 				addItem(1);
 				crowbar->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				audio->playEffect("pickup.wav");
 				//crowbarB = edge->contact->GetFixtureB()->GetBody();
 			}
 		}
@@ -327,6 +329,12 @@ void Basement::tick()
 				addItem(2);
 				gasCan->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				auto action = FadeOut::create(1);
+				girl1->setOpacity(175);
+				//audio->playEffect("pickup.wav");
+				audio->playEffect("girl1.wav");
+				girl1->runAction(action);
+
 				//gasCanB = edge->contact->GetFixtureB()->GetBody();
 				// world->DestroyBody(gasCanB);
 			}
@@ -338,6 +346,13 @@ void Basement::tick()
 				addItem(3);
 				axe->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				auto action = FadeOut::create(2);
+				girl2->setOpacity(175);
+				//audio->playEffect("pickup.wav");
+				audio->playEffect("girl2.wav");
+				auto moveBy = MoveBy::create(2, Vec2(-100, 0));
+				girl2->runAction(moveBy);
+				girl2->runAction(action);
 				//world->DestroyBody(gasCanB);
 			}
 		}
@@ -348,6 +363,7 @@ void Basement::tick()
 				addItem(5);
 				keyBottle->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				audio->playEffect("pickup.wav");
 				//world->DestroyBody(gasCanB);
 			}
 		}
@@ -360,6 +376,7 @@ void Basement::tick()
 				
 				// keyBottleT->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				//audio->playEffect("pickup.wav");
 				// world->DestroyBody(keyB);
 				key->setOpacity(0);
 				//world->DestroyBody(gasCanB);
@@ -370,9 +387,18 @@ void Basement::tick()
 		{
 			if (charUsing)
 			{
+				
 				addItem(4);
 				bottle->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				auto action = FadeOut::create(3);
+				//audio->playEffect("pickup.wav");
+				girl3->setOpacity(175);
+				auto moveBy = MoveBy::create(2, Vec2(-100, 0));
+				girl3->runAction(moveBy);
+				audio->playEffect("girl3.wav");
+				girl3->runAction(action);
+				
 				//world->DestroyBody(gasCanB);
 			}
 		}
@@ -392,15 +418,15 @@ void Basement::tick()
 		{
 			if (charUsing)
 			{
-				auto moveBy = MoveBy::create(2, Vec2(20, 20));
-				crowbar->runAction(moveBy);
+				
+				//crowbar->runAction(moveBy);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				glass->setOpacity(0);
 				glassBroken = true;
 				//world->DestroyBody(gasCanB);
 			}
 		}
-		if (edge->contact->GetFixtureB()->GetBody() != NULL && edge->contact->GetFixtureB()->GetBody()->GetUserData() ==logs)
+		if (edge->contact->GetFixtureB()->GetBody() != NULL && edge->contact->GetFixtureB()->GetBody()->GetUserData() ==logs && display3->getOpacity() > 0)
 		{
 			if (charUsing)
 			{
@@ -444,7 +470,7 @@ void Basement::tick()
 			if (win)
 			{
 				kill = true;
-				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				
 				heal->setVisible(true);
 			}
 		}
@@ -452,8 +478,15 @@ void Basement::tick()
 		{
 			if (kill)
 			{
-				enemyB->SetLinearVelocity(b2Vec2(0, 0));
+				enemyB->SetLinearVelocity(b2Vec2(0, -2));
 				enemyIdle->setOpacity(0);
+				enemyDying->setOpacity(255);
+				auto action = FadeOut::create(1);
+				enemyDying->runAction(action);
+				audio->playEffect("scary1.wav");
+				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				kill = false;
+				leaveGame = true;
 				
 			}
 			else
@@ -461,6 +494,21 @@ void Basement::tick()
 				audio->stopAllEffects();
 				auto scene = NFMenu::createScene();
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+				//LuaState::Destroy(luaPState);
+				removeItem(1);
+				removeItem(3);
+			}
+		}
+
+		if (edge->contact->GetFixtureB()->GetBody() != NULL && edge->contact->GetFixtureB()->GetBody()->GetUserData() == leave)
+		{
+			if (leaveGame)
+			{
+				audio->stopAllEffects();
+				auto scene = NFMenu::createScene();
+				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+				removeItem(1);
+				removeItem(3);
 			}
 		}
 		//if(keyBottleT->getPositionX() == (wallFire->getPositionX() + wallFire->getContentSize().width) && thrownBottleT== true)
@@ -555,10 +603,23 @@ bool Basement::init()
 
 	enemy = rootNode->getChildByTag(57);
 	enemyIdle = rootNode->getChildByTag(101);
+	enemyDying = rootNode->getChildByTag(87);
 	lightWin = rootNode->getChildByName("lightWin");
 	heal = rootNode->getChildByName("heal");
+
+	girl1 = rootNode->getChildByName("girl1");
+	girl2 = rootNode->getChildByName("girl2");
+	girl3 = rootNode->getChildByName("girl3");
+
+	leave = rootNode->getChildByName("leave");
+	
+
+	girl1->setOpacity(0);
+	girl2->setOpacity(0);
+	girl3->setOpacity(0);
 	lightWin->setOpacity(0);
 	enemy->setOpacity(0);
+	enemyDying->setOpacity(0);
 	
 	//enemyP = enemyB->GetPosition();
 	map2 = rootNode->getChildByTag(69);
@@ -589,6 +650,7 @@ bool Basement::init()
 	addBoxBodyForStatic(rightwall, rightwallB);
 	addBoxBodyForStatic(rightwall2, rightwall2B);
 	addBoxBodyForStatic(rightwall3, rightwall3B);
+	addBoxBodyForStatic(leave, leaveB);
 	addBoxBodyForStatic(ceiling, ceilingB);
 	addBoxBodyForStatic(ceiling2, ceiling2B);
 	addBoxBodyForStaticWALL(lockedwall);
@@ -656,6 +718,11 @@ bool Basement::init()
 	timeLine4->retain(); //released later on
 	enemyIdle->runAction(timeLine4);
 	timeLine4->gotoFrameAndPlay(0, 31, true);
+
+	cocostudio::timeline::ActionTimeline *timeLine5 = CSLoader::createTimeline("enemyDying.csb");
+	timeLine5->retain(); //released later on
+	enemyDying->runAction(timeLine5);
+	timeLine5->gotoFrameAndPlay(0, 83, true);
 
 	auto eventListener = EventListenerKeyboard::create();
 
@@ -793,18 +860,21 @@ void Basement::update(float delta) {
 			map2->setOpacity(255);
 			world->DestroyBody(lockedwallB);
 			world->DestroyBody(downArrowB);
-			//removeItem(4);
+			removeItem(6);
 			//enemyB->SetTransform(enemyP,0);
 			enemyIdle->setOpacity(255);
 			enemyB->SetLinearVelocity(b2Vec2(-5, 0));
+			
 			win = true;
 			
 	}
 	if (kill == true)
 	{
+		
 		heal->setVisible(true);
 		explosion->setVisible(false);
 		explosionFire->setVisible(false);
+		
 		
 	}
 
