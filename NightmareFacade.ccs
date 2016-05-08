@@ -6,11 +6,6 @@
         <Folder Name="Assets">
           <Folder Name="animations">
             <Image Name="EnemyDeath1.png" />
-            <Image Name="EnemyDeath99.png" />
-            <Image Name="EnemyDeath999.png" />
-            <Image Name="EnemyDeath9999.png" />
-            <Image Name="EnemyDeath99999.png" />
-            <Image Name="EnemyDeath9999999.png" />
             <Image Name="EnemyDeath2.png" />
             <Image Name="EnemyDeath3.png" />
             <Image Name="EnemyDeath4.png" />
@@ -19,6 +14,12 @@
             <Image Name="EnemyDeath7.png" />
             <Image Name="EnemyDeath8.png" />
             <Image Name="EnemyDeath9.png" />
+            <Image Name="EnemyDeath99.png" />
+            <Image Name="EnemyDeath999.png" />
+            <Image Name="EnemyDeath9999.png" />
+            <Image Name="EnemyDeath99999.png" />
+            <Image Name="EnemyDeath9999999.png" />
+            <PlistInfo Name="enemydying.csi" Type="Plist" />
             <Image Name="idle1.png" />
             <Image Name="idle2.png" />
             <Image Name="idle3.png" />
@@ -39,7 +40,6 @@
             <Image Name="right3.png" />
             <Image Name="right4.png" />
             <PlistInfo Name="rightPlist.csi" Type="Plist" />
-            <PlistInfo Name="enemydying.csi" Type="Plist" />
           </Folder>
           <Folder Name="level1">
             <Folder Name="animations">
@@ -98,22 +98,68 @@
           <Image Name="Splash Layout copy.png" />
           <TTF Name="WalterTurncoat.ttf" />
         </Folder>
+        <Folder Name="level2">
+          <Folder Name="animations">
+            <PlistInfo Name="crateAnim.csi" Type="Plist" />
+            <Image Name="crateAnim1.png" />
+            <Image Name="crateAnim2.png" />
+            <Image Name="crateAnim3.png" />
+            <Image Name="crateAnim4.png" />
+            <Image Name="Lightning.png" />
+            <PlistInfo Name="rain.csi" Type="Plist" />
+            <Image Name="Rain1.png" />
+            <Image Name="Rain2.png" />
+            <Image Name="Rain3.png" />
+            <Image Name="Rain4.png" />
+          </Folder>
+          <Image Name="Base Stove.png" />
+          <Image Name="Bookshelf.png" />
+          <Image Name="Bottom Lever Rod.png" />
+          <Image Name="Bow.png" />
+          <Image Name="Closed Grate.png" />
+          <Image Name="Crate 1.png" />
+          <Image Name="Crate 2.png" />
+          <Image Name="Crate 3.png" />
+          <Image Name="Crate 4.png" />
+          <Image Name="Crate 5.png" />
+          <Image Name="Empty Water Bucket.png" />
+          <Image Name="Enemy.png" />
+          <Image Name="Filled Water Bucket.png" />
+          <Image Name="Fixed Lever.png" />
+          <Image Name="Full Level Static Only.png" />
+          <Image Name="Gate Thing.png" />
+          <Image Name="ghost.png" />
+          <Image Name="Hot Stove Overlay.png" />
+          <Image Name="level2.png" />
+          <Image Name="Lever Base.png" />
+          <Image Name="Middle Lever Rod.png" />
+          <Image Name="Normal Crate.png" />
+          <Image Name="Open Grate.png" />
+          <Image Name="Pulled Lever.png" />
+          <Image Name="Top Lever Rod.png" />
+          <Image Name="Water Barrel.png" />
+          <Image Name="workBench.png" />
+          <Image Name="Workbench.png" />
+        </Folder>
         <Project Name="BasementRoom1.csd" Type="Scene" />
+        <Project Name="crateAnim.csd" Type="Node" />
         <Project Name="detectiveIdle.csd" Type="Node" />
         <Project Name="detectiveSwing.csd" Type="Node" />
         <Project Name="detectiveWalk.csd" Type="Node" />
+        <Project Name="enemyDying.csd" Type="Node" />
         <Project Name="enemyIdle.csd" Type="Node" />
         <PlistParticleFile Name="explosion (1).plist" />
         <PlistParticleFile Name="explosion.plist" />
         <PlistParticleFile Name="explosionFire.plist" />
         <Project Name="idleAnimMenu.csd" Type="Node" />
         <Project Name="leftAnimMenu.csd" Type="Node" />
+        <Project Name="level2.csd" Type="Scene" />
         <Project Name="MainScene.csd" Type="Scene" />
         <Project Name="MenuScene.csd" Type="Scene" />
         <PlistParticleFile Name="particle_texture (1).plist" />
         <PlistParticleFile Name="particle_texture.plist" />
+        <Project Name="rainAnim.csd" Type="Node" />
         <Project Name="rightAnimMenu.csd" Type="Node" />
-        <Project Name="enemyDying.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

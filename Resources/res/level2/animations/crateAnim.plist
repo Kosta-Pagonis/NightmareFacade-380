@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>level2/animations/crateAnim1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{453,0},{129,115}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{200,200}</string>
+			</dict>
+			<key>level2/animations/crateAnim2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{317,0},{136,123}}</string>
+				<key>offset</key>
+				<string>{2,2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{200,200}</string>
+			</dict>
+			<key>level2/animations/crateAnim3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{171,0},{146,138}}</string>
+				<key>offset</key>
+				<string>{0,3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{200,200}</string>
+			</dict>
+			<key>level2/animations/crateAnim4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{171,164}}</string>
+				<key>offset</key>
+				<string>{2,3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{200,200}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>crateAnim.png</string>
+			<key>realTextureFileName</key>
+			<string>crateAnim.png</string>
+			<key>size</key>
+			<string>{582,164}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>582</integer>
+			<key>height</key>
+			<integer>164</integer>
+		</dict>
+	</dict>
+</plist>

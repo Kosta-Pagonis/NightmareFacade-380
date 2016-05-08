@@ -98,6 +98,14 @@ function getHeldItem()
     return inventory[inventoryPointer] --lua starts indicies at 1
 end
 
+--Moves the inventoryPointer to an item given by item in the parameter.
+function setHeldItem(item)
+	local temp = inventoryPointer
+	repeat
+		shiftInventoryRight()
+	until 
+		inventory[inventoryPointer] == item
+end
 --Moves the pointer to the left of the array until a non negative-1 value is found.
 function shiftInventoryLeft()
 	local temp = inventoryPointer

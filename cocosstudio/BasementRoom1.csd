@@ -557,7 +557,7 @@
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="enemyDying.csd" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="girl1" ActionTag="1818793674" Tag="120" IconVisible="False" LeftMargin="942.2711" RightMargin="-49.2711" TopMargin="335.4211" BottomMargin="111.5789" ctype="SpriteObjectData">
+          <AbstractNodeData Name="girl1" ActionTag="1818793674" Tag="120" IconVisible="False" LeftMargin="942.2740" RightMargin="-49.2740" TopMargin="335.4147" BottomMargin="111.5853" ctype="SpriteObjectData">
             <Size X="107.0000" Y="153.0000" />
             <AnchorPoint ScaleX="0.4993" ScaleY="0.4361" />
             <Position X="995.6991" Y="178.3086" />
@@ -568,7 +568,7 @@
             <FileData Type="Normal" Path="Assets/level1/Flattened.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="girl2" ActionTag="1390896737" Tag="121" IconVisible="False" LeftMargin="691.5758" RightMargin="201.4242" TopMargin="-241.9649" BottomMargin="688.9649" ctype="SpriteObjectData">
+          <AbstractNodeData Name="girl2" ActionTag="1390896737" Tag="121" IconVisible="False" LeftMargin="691.5787" RightMargin="201.4213" TopMargin="-241.9713" BottomMargin="688.9713" ctype="SpriteObjectData">
             <Size X="107.0000" Y="153.0000" />
             <AnchorPoint ScaleX="0.4993" ScaleY="0.4361" />
             <Position X="745.0038" Y="755.6946" />
@@ -579,7 +579,7 @@
             <FileData Type="Normal" Path="Assets/level1/Flattened.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="girl3" ActionTag="-577233517" Tag="122" IconVisible="False" LeftMargin="1417.0667" RightMargin="-524.0667" TopMargin="-250.2712" BottomMargin="697.2712" ctype="SpriteObjectData">
+          <AbstractNodeData Name="girl3" ActionTag="-577233517" Tag="122" IconVisible="False" LeftMargin="1417.0696" RightMargin="-524.0696" TopMargin="-250.2776" BottomMargin="697.2776" ctype="SpriteObjectData">
             <Size X="107.0000" Y="153.0000" />
             <AnchorPoint ScaleX="0.4993" ScaleY="0.4361" />
             <Position X="1470.4946" Y="764.0009" />

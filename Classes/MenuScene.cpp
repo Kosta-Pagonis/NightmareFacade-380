@@ -5,6 +5,7 @@
 #include "SimpleAudioEngine.h"
 #include "cocostudio\CocoStudio.h"
 #include "cocostudio\ActionTimeline\CCActionTimelineNode.h"
+#include "level2.h"
 
 #define PTM_RATIO 30
 USING_NS_CC;
@@ -273,7 +274,9 @@ eventListener->onKeyReleased = [this](EventKeyboard::KeyCode keyCode, Event* eve
 			Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 		}
 		if (helpLit) {
-			//show help image
+			_eventDispatcher->removeAllEventListeners();
+			auto scene = level2::createScene();
+			Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 		}
 		if (quitLit) {
 			exit(0);
