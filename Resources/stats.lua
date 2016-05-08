@@ -78,7 +78,6 @@ function addItem(item)
     end
 end
 
---Removes the item from the inventory, replacing the item in the inventory given by the "item" parameter with a -1.
 function removeItem(item)
     local i = 1
     while(i <= inventorySize) do
@@ -97,15 +96,6 @@ end
 --Returns the current value determined by inventoryPointer, the inventory's pointer.
 function getHeldItem()
     return inventory[inventoryPointer] --lua starts indicies at 1
-end
-
---Moves the inventoryPointer to an item given by item in the parameter.
-function setHeldItem(item)
-	local temp = inventoryPointer
-	repeat
-		shiftInventoryRight()
-	until 
-		inventory[inventoryPointer] == itemID or temp == inventoryPointer
 end
 
 --Moves the pointer to the left of the array until a non negative-1 value is found.
