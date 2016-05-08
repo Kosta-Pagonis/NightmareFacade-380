@@ -1,5 +1,17 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(367,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+﻿  BasementRoom1.cpp
+c:\users\max2729\source\repos\nightmarefacade-380\classes\basementroom1.cpp(242): warning C4996: 'cocos2d::CCSprite': was declared deprecated
+  c:\cocos\cocos2d-x\cocos2d-x-3.10\cocos\deprecated\ccdeprecated.h(680): note: see declaration of 'cocos2d::CCSprite'
+c:\users\max2729\source\repos\nightmarefacade-380\classes\basementroom1.cpp(243): warning C4996: 'cocos2d::ccp': was declared deprecated
+  c:\cocos\cocos2d-x\cocos2d-x-3.10\cocos\deprecated\ccdeprecated.h(49): note: see declaration of 'cocos2d::ccp'
+c:\users\max2729\source\repos\nightmarefacade-380\classes\basementroom1.cpp(538): warning C4996: 'cocos2d::kmGLPushMatrix': was declared deprecated
+  c:\cocos\cocos2d-x\cocos2d-x-3.10\cocos\deprecated\ccdeprecated.h(1067): note: see declaration of 'cocos2d::kmGLPushMatrix'
+c:\users\max2729\source\repos\nightmarefacade-380\classes\basementroom1.cpp(540): warning C4996: 'cocos2d::kmGLPopMatrix': was declared deprecated
+  c:\cocos\cocos2d-x\cocos2d-x-3.10\cocos\deprecated\ccdeprecated.h(1068): note: see declaration of 'cocos2d::kmGLPopMatrix'
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(367,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   60 File(s) copied
-  NightmareFacade.vcxproj -> C:\Users\Spartanrme\Documents\Visual Studio 2015\Projects\NightmareFacade\proj.win32\Debug.win32\NightmareFacade.exe
+AppDelegate.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     Creating library C:\Users\Max2729\Source\Repos\NightmareFacade-380\proj.win32\Debug.win32\NightmareFacade.lib and object C:\Users\Max2729\Source\Repos\NightmareFacade-380\proj.win32\Debug.win32\NightmareFacade.exp
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+  NightmareFacade.vcxproj -> C:\Users\Max2729\Source\Repos\NightmareFacade-380\proj.win32\Debug.win32\NightmareFacade.exe
   0 File(s) copied
