@@ -32,8 +32,10 @@
       <Value ctype="TabsInfo">
         <OpenedDocuments>
           <FilePathData Path="BasementRoom1.csd" />
+          <FilePathData Path="level2.csd" />
+          <FilePathData Path="crateAnim.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="BasementRoom1.csd" />
+        <ActiveDocument Path="level2.csd" />
       </Value>
     </Item>
   </Properties>

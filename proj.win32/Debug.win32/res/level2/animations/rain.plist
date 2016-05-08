@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>level2/animations/Rain1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,342},{946,109}}</string>
+				<key>offset</key>
+				<string>{11,3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{968,114}</string>
+			</dict>
+			<key>level2/animations/Rain2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,114},{962,114}}</string>
+				<key>offset</key>
+				<string>{-3,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{968,114}</string>
+			</dict>
+			<key>level2/animations/Rain3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,228},{958,114}}</string>
+				<key>offset</key>
+				<string>{-5,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{968,114}</string>
+			</dict>
+			<key>level2/animations/Rain4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{968,114}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{968,114}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>rain.png</string>
+			<key>realTextureFileName</key>
+			<string>rain.png</string>
+			<key>size</key>
+			<string>{968,451}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>968</integer>
+			<key>height</key>
+			<integer>451</integer>
+		</dict>
+	</dict>
+</plist>

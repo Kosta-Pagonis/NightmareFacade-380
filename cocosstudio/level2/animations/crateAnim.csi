@@ -1,0 +1,12 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="crateAnim" Type="Plist" ID="53f932c6-b99b-40ca-b2f4-c35a7b744e62" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="level2/animations/crateAnim1.png" />
+      <FilePathData Path="level2/animations/crateAnim2.png" />
+      <FilePathData Path="level2/animations/crateAnim3.png" />
+      <FilePathData Path="level2/animations/crateAnim4.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

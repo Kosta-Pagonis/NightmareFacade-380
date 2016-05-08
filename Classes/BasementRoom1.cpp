@@ -6,7 +6,7 @@
 #include "cocostudio\ActionTimeline\CCActionTimelineNode.h"
 #include "2d\CCLight.h"
 #include "MenuScene.h"
-
+#include "level2.h"
 #include "luaplus.h"
 
 
@@ -249,36 +249,29 @@ void Basement::tick()
 
 	edge = spriteBody->GetContactList();
 	
-	if (edge != NULL && edge->contact != NULL)
+	while (edge != NULL && edge->contact != NULL)
 	{
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == downArrow)
 		{
-			downArrow->setOpacity(155);
+			downArrow->setOpacity(30);
 			if (charMovingDown)
 			{
 				spriteBody->SetTransform(b2Vec2(12, 27), 0);
 
 			}
 		}
-		else
-		{
-			downArrow->setOpacity(0);
-		}
+		
 
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == upArrow)
 		{
-			upArrow->setOpacity(155);
+			upArrow->setOpacity(30);
 			//audio->playEffect("helpsound.wav");
 			if (charMovingUp)
 			{
 				spriteBody->SetTransform(b2Vec2(32, 5), 0);
 			}
 		}
-		else
-		{
-			upArrow->setOpacity(0);
-
-		}
+		
 
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == doorUp)
 		{
@@ -296,7 +289,7 @@ void Basement::tick()
 		}
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == downArrow2)
 		{
-			downArrow2->setOpacity(155);
+			downArrow2->setOpacity(30);
 			//audio->playEffect("helpsound.wav");
 			if (charMovingDown)
 			{
@@ -304,11 +297,7 @@ void Basement::tick()
 			}
 
 		}
-		else
-		{
-			downArrow2->setOpacity(0);
-
-		}
+		
 
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == crowbar)
 		{
@@ -507,27 +496,15 @@ void Basement::tick()
 			if (leaveGame)
 			{
 				audio->stopAllEffects();
-				auto scene = NFMenu::createScene();
-				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 				removeItem(1);
 				removeItem(3);
+				auto scene = level2::createScene();
+				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+				
 			}
 		}
-		//if(keyBottleT->getPositionX() == (wallFire->getPositionX() + wallFire->getContentSize().width) && thrownBottleT== true)
-		//{/
-			//	if (logsEXP->getOpacity() > 0 && gasCanEXP->getOpacity() > 0)
-			//	{
-				//	keyBottleT->setOpacity(0);
-				//	logsEXP->setOpacity(0);
-				//	gasCanEXP->setOpacity(0);
-				//	explosion->setVisible(true);
-				//	explosionFire->setVisible(true);
-				//}
 
-			
-		//}
-
-
+		edge = edge->next;
 	}
 
 }

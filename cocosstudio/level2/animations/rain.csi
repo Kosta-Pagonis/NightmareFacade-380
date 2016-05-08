@@ -1,0 +1,12 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="rain" Type="Plist" ID="abe361cc-2ffe-42ab-95f5-bc1ae7603373" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="level2/animations/Rain1.png" />
+      <FilePathData Path="level2/animations/Rain2.png" />
+      <FilePathData Path="level2/animations/Rain3.png" />
+      <FilePathData Path="level2/animations/Rain4.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>
