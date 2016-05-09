@@ -9,8 +9,6 @@
 #include "level2.h"
 #include "luaplus.h"
 
-
-
 using namespace LuaPlus;
 USING_NS_CC;
 #define PTM_RATIO 30
@@ -23,10 +21,12 @@ LuaFunction<int >getCurSanity = luaPState->GetGlobal("getCurSanity");
 LuaFunction<float>  decSanityByAmount = luaPState->GetGlobal("decSanityByAmount");
 LuaFunction<void> restoreSanityToMax = luaPState->GetGlobal("restoreSanityToMax");
 LuaFunction<int> getHeldItem = luaPState->GetGlobal("getHeldItem");
+LuaFunction<void> setHeldItem = luaPState->GetGlobal("setHeldItem");
 LuaFunction<void> shiftInventoryRight = luaPState->GetGlobal("shiftInventoryRight");
 LuaFunction<void> shiftInventoryLeft = luaPState->GetGlobal("shiftInventoryLeft");
 LuaFunction<void> addItem = luaPState->GetGlobal("addItem");
 LuaFunction<void> removeItem = luaPState->GetGlobal("removeItem");
+
 
 Scene* Basement::createScene()
 {
@@ -136,7 +136,7 @@ void Basement::addBoxBodyForKey(Node * sprite)
 		sprite->getPositionY() / PTM_RATIO);
 	spriteBodyDef.userData = sprite;
 	keyB = world->CreateBody(&spriteBodyDef);
-
+	
 	b2PolygonShape spriteShape;
 	spriteShape.SetAsBox(sprite->getContentSize().width / PTM_RATIO / 2 * sprite->getScaleX(),
 		sprite->getContentSize().height / PTM_RATIO / 2 * sprite->getScaleY());
@@ -145,6 +145,7 @@ void Basement::addBoxBodyForKey(Node * sprite)
 	spriteShapeDef.density = 1.0;
 	spriteShapeDef.isSensor = true;
 	keyB->CreateFixture(&spriteShapeDef);
+	
 }
 
 void Basement::addBoxBodyForStaticNonWall(Node * sprite, b2Body* body)
@@ -249,7 +250,8 @@ void Basement::tick()
 
 	edge = spriteBody->GetContactList();
 	
-	while (edge != NULL && edge->contact != NULL)
+	
+	while (edge != NULL && edge->contact != NULL && destroyLUA == false)
 	{
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == downArrow)
 		{
@@ -304,6 +306,7 @@ void Basement::tick()
 			if (charUsing)
 			{
 				addItem(1);
+				setHeldItem(1);
 				crowbar->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				audio->playEffect("pickup.wav");
@@ -316,6 +319,7 @@ void Basement::tick()
 			if (charUsing)
 			{
 				addItem(2);
+				setHeldItem(2);
 				gasCan->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				auto action = FadeOut::create(1);
@@ -333,6 +337,7 @@ void Basement::tick()
 			if (charUsing)
 			{
 				addItem(3);
+				setHeldItem(3);
 				axe->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				auto action = FadeOut::create(2);
@@ -344,12 +349,14 @@ void Basement::tick()
 				girl2->runAction(action);
 				//world->DestroyBody(gasCanB);
 			}
+
 		}
 		if (edge->contact->GetFixtureB()->GetBody() != NULL && edge->contact->GetFixtureB()->GetBody()->GetUserData() == keyBottle)
 		{
 			if (charUsing)
 			{
 				addItem(5);
+				setHeldItem(5);
 				keyBottle->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				audio->playEffect("pickup.wav");
@@ -362,7 +369,7 @@ void Basement::tick()
 			if (charUsing)
 			{
 				addItem(6);
-				
+				setHeldItem(6);
 				// keyBottleT->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				//audio->playEffect("pickup.wav");
@@ -378,6 +385,7 @@ void Basement::tick()
 			{
 				
 				addItem(4);
+				setHeldItem(4);
 				bottle->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				auto action = FadeOut::create(3);
@@ -396,6 +404,7 @@ void Basement::tick()
 		//	if (charUsing)
 		//	{
 		//		addItem(4);
+		//		setHeldItem(4);
 		//		bottleT->setOpacity(0);
 				//world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				//addBoxBodyForDynamicBottleT(bottleT);
@@ -420,6 +429,7 @@ void Basement::tick()
 			if (charUsing)
 			{
 				addItem(7);
+				setHeldItem(7);
 				logs->setOpacity(0);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
 				//world->DestroyBody(gasCanB);
@@ -485,9 +495,10 @@ void Basement::tick()
 				audio->stopAllEffects();
 				auto scene = NFMenu::createScene();
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+				destroyLUA = true;
 				//LuaState::Destroy(luaPState);
-				removeItem(1);
-				removeItem(3);
+				//removeItem(1);
+				//removeItem(3);
 			}
 		}
 
@@ -496,17 +507,18 @@ void Basement::tick()
 			if (leaveGame)
 			{
 				audio->stopAllEffects();
-				removeItem(1);
-				removeItem(3);
+				//removeItem(1);
+				//removeItem(3);
+				//LuaState::Destroy(luaPState);
+				destroyLUA = true;
 				auto scene = level2::createScene();
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
-				
 			}
 		}
 
+
 		edge = edge->next;
 	}
-
 }
 
 //for debugging
@@ -831,9 +843,9 @@ void Basement::update(float delta) {
 	
 	if (gasCanEXP->getOpacity() > 0 && bottleT->getOpacity() > 0 && logsEXP->getOpacity() > 0)
 	{
-		keyBottleT->setOpacity(0);
-			logsEXP->setOpacity(0);
-			gasCanEXP->setOpacity(0);
+		bottleT->setOpacity(0);
+		logsEXP->setOpacity(0);
+		gasCanEXP->setOpacity(0);
 			explosion->setVisible(true);
 			explosionFire->setVisible(true);
 			map2->setOpacity(255);
@@ -854,9 +866,6 @@ void Basement::update(float delta) {
 		heal->setVisible(true);
 		explosion->setVisible(false);
 		explosionFire->setVisible(false);
-		
-		
-		
 	}
 
 	id = getHeldItem();  // displays depending on invetory item
@@ -1005,8 +1014,8 @@ void Basement::update(float delta) {
 			sprite->setOpacity(0);
 			movedL = true;
 			movedR = false;
-			//if (charRun)
-			//	spriteBody->SetLinearVelocity(b2Vec2(-8, 0));
+			if (charRun)
+				spriteBody->SetLinearVelocity(b2Vec2(-28, 0));
 			//if (charSwing)
 			//{
 			//	walkAnim->setOpacity(0);
@@ -1029,8 +1038,8 @@ void Basement::update(float delta) {
 
 			movedL = false;
 			movedR = true;
-			//if (charRun)
-			//	spriteBody->SetLinearVelocity(b2Vec2(8, 0));
+			if (charRun)
+				spriteBody->SetLinearVelocity(b2Vec2(28, 0));
 			//if (charSwing)
 			//{
 			//	walkAnim->setOpacity(0);
@@ -1045,7 +1054,6 @@ void Basement::update(float delta) {
 	{
 		spriteBody->SetLinearVelocity(b2Vec2(0, 0));
 		walkAnim->setOpacity(0);
-
 		sprite->setOpacity(0);
 
 		if (movedL)
@@ -1077,7 +1085,4 @@ void Basement::update(float delta) {
 
 		}
 	}
-
-
-
 }

@@ -104,7 +104,7 @@ function setHeldItem(item)
 	repeat
 		shiftInventoryRight()
 	until 
-		inventory[inventoryPointer] == item
+		inventory[inventoryPointer] == item or inventoryPointer == temp
 end
 --Moves the pointer to the left of the array until a non negative-1 value is found.
 function shiftInventoryLeft()

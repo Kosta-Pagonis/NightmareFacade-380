@@ -7,7 +7,6 @@
 #include "2d\CCLight.h"
 #include "MenuScene.h"
 #include "level2.h"
-
 #include "luaplus.h"
 
 
@@ -15,6 +14,7 @@ using namespace cocostudio::timeline;
 using namespace LuaPlus;
 USING_NS_CC;
 #define PTM_RATIO 30
+
 
 auto audioLv2 = CocosDenshion::SimpleAudioEngine::getInstance();
 LuaState* luaPStateLv2 = LuaState::Create();
@@ -660,7 +660,7 @@ void level2::tick()
 				leverTop->setOpacity(0);
 				world->DestroyBody(leverTopB);
 				addItemLv2(5);
-				setHeldItemLv2(5);
+				//setHeldItemLv2(5);
 			}
 		}
 		if (edge->contact->GetFixtureB()->GetBody() == bucketB)
@@ -1049,6 +1049,12 @@ void level2::update(float)
 		shiftInventoryRightLv2();
 		invR = false;
 	}
+
+	if (invL)
+	{
+		shiftInventoryLeftLv2();
+		invL = false;
+	}
 	if (ghostDied == true)
 	{
 		power->setPosition(ghost->getPosition());
@@ -1266,6 +1272,7 @@ bool level2::init()
 	
 	addItemLv2(1);
 	addItemLv2(2);
+	//addItemLv2(5);
 	
 	fullLever->setOpacity(0);
 	crobarPic->setOpacity(0);
@@ -1345,9 +1352,9 @@ bool level2::init()
 		case EventKeyboard::KeyCode::KEY_SPACE:
 			charSwing = true;
 			break;
-		//case EventKeyboard::KeyCode::KEY_Z:
-		//	invL = true;
-		//	break;
+		case EventKeyboard::KeyCode::KEY_Z:
+			invL = true;
+			break;
 		case EventKeyboard::KeyCode::KEY_X:
 			invR = true;
 			break;
