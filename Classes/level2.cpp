@@ -587,7 +587,7 @@ void level2::tick()
 	edge = spriteBody->GetContactList();
 	
 	
-	while (edge != NULL && edge->contact != NULL)
+	while (edge != NULL && edge->contact != NULL && destroyLUA == false)
 	{
 		if (edge->contact->GetFixtureB()->GetBody() == downArrowBoilerB)
 		{

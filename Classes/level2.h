@@ -185,6 +185,7 @@ private:
 	bool teleportedChase;
 	bool inLight;
 	bool ghostDied;
+	bool destroyLUA;
 
 	//----------- 
 	int id;
