@@ -54,6 +54,7 @@ private:
 	bool win = false;
 	bool kill = false;
 	bool leaveGame = false;
+	bool destroyLUA = false;
 	Node* sprite;
 	Node* heal;
 	Node* upArrow;
