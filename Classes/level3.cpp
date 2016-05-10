@@ -704,7 +704,7 @@ void level3::tick()
 		}
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note1)
 		{
-			if (charUsing)
+			if (charUsing && charMovingLeft == false && charMovingRight == false)
 			{
 				note1Pic->setOpacity(255);
 			}
@@ -715,7 +715,7 @@ void level3::tick()
 		
 		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note2)
 		{
-			if (charUsing)
+			if (charUsing && charMovingLeft == false && charMovingRight == false)
 			{
 				note2Pic->setOpacity(255);
 			}
