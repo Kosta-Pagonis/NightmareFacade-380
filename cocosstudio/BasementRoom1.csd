@@ -314,6 +314,39 @@
             <FileData Type="Normal" Path="Assets/level1/downArrow.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
+          <AbstractNodeData Name="note1" ActionTag="-803127406" Tag="456" IconVisible="False" LeftMargin="457.8127" RightMargin="505.1873" TopMargin="323.6472" BottomMargin="238.3528" ctype="SpriteObjectData">
+            <Size X="37.0000" Y="38.0000" />
+            <AnchorPoint ScaleX="0.3529" ScaleY="0.2855" />
+            <Position X="470.8700" Y="249.2016" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4709" Y="0.4153" />
+            <PreSize X="0.0370" Y="0.0633" />
+            <FileData Type="Normal" Path="level3/note.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="note2" ActionTag="-904406204" Tag="457" IconVisible="False" LeftMargin="1651.3317" RightMargin="-688.3317" TopMargin="358.5428" BottomMargin="203.4572" ctype="SpriteObjectData">
+            <Size X="37.0000" Y="38.0000" />
+            <AnchorPoint ScaleX="0.3529" ScaleY="0.2855" />
+            <Position X="1664.3889" Y="214.3061" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="1.6644" Y="0.3572" />
+            <PreSize X="0.0370" Y="0.0633" />
+            <FileData Type="Normal" Path="level3/note.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="note3" ActionTag="-435885619" Tag="458" IconVisible="False" LeftMargin="2310.3481" RightMargin="-1347.3481" TopMargin="331.8109" BottomMargin="230.1891" ctype="SpriteObjectData">
+            <Size X="37.0000" Y="38.0000" />
+            <AnchorPoint ScaleX="0.3529" ScaleY="0.2855" />
+            <Position X="2323.4055" Y="241.0379" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="2.3234" Y="0.4017" />
+            <PreSize X="0.0370" Y="0.0633" />
+            <FileData Type="Normal" Path="level3/note.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
           <AbstractNodeData Name="swingLeft" ActionTag="269377235" Tag="41" IconVisible="True" LeftMargin="114.8183" RightMargin="885.1817" TopMargin="382.3721" BottomMargin="217.6279" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>

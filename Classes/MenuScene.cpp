@@ -6,6 +6,7 @@
 #include "cocostudio\CocoStudio.h"
 #include "cocostudio\ActionTimeline\CCActionTimelineNode.h"
 #include "level2.h"
+#include "level3.h"
 
 #define PTM_RATIO 30
 USING_NS_CC;
@@ -104,10 +105,12 @@ void NFMenu::tick()
 		{
 			helpLit = true;
 			help->setOpacity(255);
+			tips->setOpacity(200);
 			//audio->playEffect("helpsound.wav");
 		}
 		else
 		{
+			tips->setOpacity(0);
 			helpLit = false;
 			help->setOpacity(50);
 			
@@ -161,6 +164,7 @@ bool NFMenu::init()
 	bed = rootNode->getChildByName("bedPic");
 	desk = rootNode->getChildByName("deskPic");
 	door = rootNode->getChildByName("doorPic");
+	tips = rootNode->getChildByName("tips");
 
 	idleAnim = rootNode->getChildByName("idleAnim");
 	leftAnim = rootNode->getChildByName("leftAnim");
@@ -254,6 +258,23 @@ eventListener->onKeyPressed = [this](EventKeyboard::KeyCode keyCode, Event* even
 	case EventKeyboard::KeyCode::KEY_D:
 		charMovingRight = true;
 		break;
+	case EventKeyboard::KeyCode::KEY_2:
+		if (playLit)
+		{
+				_eventDispatcher->removeAllEventListeners();
+				auto scene = level2::createScene();
+				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+		}
+		
+	case EventKeyboard::KeyCode::KEY_3:
+		if (playLit)
+		{
+				_eventDispatcher->removeAllEventListeners();
+				auto scene = level3::createScene();
+				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+			
+		}
+		
 	}
 
 };
@@ -273,13 +294,9 @@ eventListener->onKeyReleased = [this](EventKeyboard::KeyCode keyCode, Event* eve
 			auto scene = Basement::createScene();
 			Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 		}
-		if (helpLit) {
-			_eventDispatcher->removeAllEventListeners();
-			auto scene = level2::createScene();
-			Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
-		}
+		
 		if (quitLit) {
-			exit(0);
+		exit(0);
 		}
 		break;
 	}

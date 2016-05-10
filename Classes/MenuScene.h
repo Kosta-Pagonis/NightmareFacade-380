@@ -30,6 +30,7 @@ private:
 	bool playLit;
 	bool helpLit;
 	bool quitLit;
+	
 	Node* sprite;
 	Node* play;
 	Node* help;
@@ -37,6 +38,7 @@ private:
 	Node* bed;
 	Node* desk;
 	Node* door;
+	Node* tips;
 
 	Node* idleAnim;
 	Node* leftAnim;

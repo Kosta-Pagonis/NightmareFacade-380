@@ -30,6 +30,8 @@ public:
 	void addBoxBodyForStaticWALL(Node* sprite);
 	void addBoxBodyForStaticArrow(Node* sprite);
 	void addBoxBodyForEnemy(Node* sprite);
+
+	void addBoxBodyForNote(Node * sprite, b2Body * body);
 	
 	void tick();
 
@@ -157,4 +159,16 @@ private:
 	cocos2d::Sprite* display6;
 	cocos2d::Sprite* display7;
 
+	Node* note1;
+	b2Body* note1B;
+	Node* note2;
+	b2Body* note2B;
+	Node* note3;
+	b2Body* note3B;
+	
+
+	cocos2d::Sprite* note1Pic;
+	cocos2d::Sprite* note2Pic;
+	cocos2d::Sprite* note3Pic;
+	
 };

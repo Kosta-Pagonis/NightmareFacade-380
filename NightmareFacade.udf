@@ -33,9 +33,10 @@
         <OpenedDocuments>
           <FilePathData Path="BasementRoom1.csd" />
           <FilePathData Path="level2.csd" />
-          <FilePathData Path="crateAnim.csd" />
+          <FilePathData Path="level3.csd" />
+          <FilePathData Path="MenuScene.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="level2.csd" />
+        <ActiveDocument Path="MenuScene.csd" />
       </Value>
     </Item>
   </Properties>

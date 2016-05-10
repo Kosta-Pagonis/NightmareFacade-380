@@ -281,6 +281,50 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
+          <AbstractNodeData Name="note1" ActionTag="-1147416422" Tag="352" IconVisible="False" LeftMargin="773.0271" RightMargin="189.9729" TopMargin="-273.0091" BottomMargin="835.0091" ctype="SpriteObjectData">
+            <Size X="37.0000" Y="38.0000" />
+            <AnchorPoint ScaleX="0.4925" ScaleY="0.4004" />
+            <Position X="791.2484" Y="850.2235" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.7912" Y="1.4170" />
+            <PreSize X="0.0370" Y="0.0633" />
+            <FileData Type="Normal" Path="level3/note.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="note2" ActionTag="-1999659776" Tag="353" IconVisible="False" LeftMargin="1806.0598" RightMargin="-843.0598" TopMargin="-267.5272" BottomMargin="829.5272" ctype="SpriteObjectData">
+            <Size X="37.0000" Y="38.0000" />
+            <AnchorPoint ScaleX="0.4925" ScaleY="0.4004" />
+            <Position X="1824.2811" Y="844.7416" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="1.8243" Y="1.4079" />
+            <PreSize X="0.0370" Y="0.0633" />
+            <FileData Type="Normal" Path="level3/note.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="note3" ActionTag="943949837" Tag="354" IconVisible="False" LeftMargin="2107.3838" RightMargin="-1144.3838" TopMargin="-259.3527" BottomMargin="821.3527" ctype="SpriteObjectData">
+            <Size X="37.0000" Y="38.0000" />
+            <AnchorPoint ScaleX="0.4925" ScaleY="0.4004" />
+            <Position X="2125.6050" Y="836.5671" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="2.1256" Y="1.3943" />
+            <PreSize X="0.0370" Y="0.0633" />
+            <FileData Type="Normal" Path="level3/note.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="note4" ActionTag="-435246644" Tag="355" IconVisible="False" LeftMargin="2557.6719" RightMargin="-1594.6719" TopMargin="291.3367" BottomMargin="270.6633" ctype="SpriteObjectData">
+            <Size X="37.0000" Y="38.0000" />
+            <AnchorPoint ScaleX="0.4925" ScaleY="0.4004" />
+            <Position X="2575.8933" Y="285.8777" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="2.5759" Y="0.4765" />
+            <PreSize X="0.0370" Y="0.0633" />
+            <FileData Type="Normal" Path="level3/note.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
           <AbstractNodeData Name="player" ActionTag="-431457896" Tag="115" IconVisible="False" LeftMargin="69.3324" RightMargin="823.6676" TopMargin="235.2359" BottomMargin="103.7641" ctype="SpriteObjectData">
             <Size X="107.0000" Y="261.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -389,6 +433,17 @@
             <Scale ScaleX="0.3395" ScaleY="0.8480" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4802" Y="0.7231" />
+            <PreSize X="0.9680" Y="0.1900" />
+            <FileData Type="Normal" Path="level2/animations/Lightning.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="lighteningSpot" ActionTag="641120344" Alpha="0" Tag="433" IconVisible="False" LeftMargin="132.0452" RightMargin="-100.0452" TopMargin="390.9114" BottomMargin="95.0886" ctype="SpriteObjectData">
+            <Size X="968.0000" Y="114.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="616.0452" Y="152.0886" />
+            <Scale ScaleX="0.1004" ScaleY="0.8480" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.6160" Y="0.2535" />
             <PreSize X="0.9680" Y="0.1900" />
             <FileData Type="Normal" Path="level2/animations/Lightning.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
@@ -620,17 +675,6 @@
             <FileData Type="Normal" Path="Assets/level1/lightSource.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="ghost" ActionTag="-920881942" Alpha="0" Tag="150" IconVisible="False" LeftMargin="2659.8430" RightMargin="-1791.8430" TopMargin="271.3478" BottomMargin="104.6522" ctype="SpriteObjectData">
-            <Size X="132.0000" Y="224.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="2725.8430" Y="216.6522" />
-            <Scale ScaleX="-1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="2.7258" Y="0.3611" />
-            <PreSize X="0.1320" Y="0.3733" />
-            <FileData Type="Normal" Path="level2/ghost.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
-          </AbstractNodeData>
           <AbstractNodeData Name="light" ActionTag="2123851061" Alpha="0" Tag="197" IconVisible="False" LeftMargin="-3.1041" RightMargin="35.1041" TopMargin="257.3796" BottomMargin="228.6204" ctype="SpriteObjectData">
             <Size X="968.0000" Y="114.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -662,6 +706,28 @@
             <PrePosition X="1.2084" Y="0.4677" />
             <PreSize X="0.3000" Y="0.6333" />
             <FileData Type="Normal" Path="level2/Enemy.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="exit" ActionTag="1736881824" Alpha="0" Tag="139" IconVisible="False" LeftMargin="2780.8350" RightMargin="-1865.8350" TopMargin="333.6717" BottomMargin="221.3283" ctype="SpriteObjectData">
+            <Size X="85.0000" Y="45.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="2823.3350" Y="243.8283" />
+            <Scale ScaleX="0.3859" ScaleY="6.5145" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="2.8233" Y="0.4064" />
+            <PreSize X="0.0850" Y="0.0750" />
+            <FileData Type="Normal" Path="level2/Hot Stove Overlay.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="ghost" ActionTag="1884677125" Alpha="0" Tag="380" IconVisible="False" LeftMargin="2568.6536" RightMargin="-1700.6536" TopMargin="262.6723" BottomMargin="113.3277" ctype="SpriteObjectData">
+            <Size X="132.0000" Y="224.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="2634.6536" Y="225.3277" />
+            <Scale ScaleX="-1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="2.6347" Y="0.3755" />
+            <PreSize X="0.1320" Y="0.3733" />
+            <FileData Type="Normal" Path="level2/ghost.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>

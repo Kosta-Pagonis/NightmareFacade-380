@@ -96,6 +96,7 @@
           <TTF Name="PermanentMarker.ttf" />
           <TTF Name="RockSalt.ttf" />
           <Image Name="Splash Layout copy.png" />
+          <Image Name="tips.png" />
           <TTF Name="WalterTurncoat.ttf" />
         </Folder>
         <Folder Name="level2">
@@ -141,6 +142,20 @@
           <Image Name="workBench.png" />
           <Image Name="Workbench.png" />
         </Folder>
+        <Folder Name="level3">
+          <Image Name="cheese.png" />
+          <Image Name="gem.png" />
+          <Image Name="Ghost Arms Down.png" />
+          <Image Name="Ghost Bloody Arms Down.png" />
+          <Image Name="Ghost Bloody Arms Up.png" />
+          <Image Name="hung.png" />
+          <Image Name="level3.png" />
+          <Image Name="level3room.png" />
+          <Image Name="magicwall.png" />
+          <Image Name="note.png" />
+          <Image Name="poision.png" />
+          <Image Name="rat.png" />
+        </Folder>
         <Project Name="BasementRoom1.csd" Type="Scene" />
         <Project Name="crateAnim.csd" Type="Node" />
         <Project Name="detectiveIdle.csd" Type="Node" />
@@ -154,6 +169,7 @@
         <Project Name="idleAnimMenu.csd" Type="Node" />
         <Project Name="leftAnimMenu.csd" Type="Node" />
         <Project Name="level2.csd" Type="Scene" />
+        <Project Name="level3.csd" Type="Scene" />
         <Project Name="MainScene.csd" Type="Scene" />
         <Project Name="MenuScene.csd" Type="Scene" />
         <PlistParticleFile Name="particle_texture (1).plist" />

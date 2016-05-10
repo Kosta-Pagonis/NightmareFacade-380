@@ -227,6 +227,26 @@ void Basement::addBoxBodyForEnemy(Node * sprite)
 	spriteShapeDef.isSensor = true;
 	enemyB->CreateFixture(&spriteShapeDef);
 }
+void Basement::addBoxBodyForNote(Node * sprite, b2Body* body)
+{
+	sprite->setAnchorPoint(Vec2(.5, .5));
+	b2BodyDef spriteBodyDef;
+	spriteBodyDef.type = b2_staticBody;
+	spriteBodyDef.position.Set(sprite->getPositionX() / PTM_RATIO,
+		sprite->getPositionY() / PTM_RATIO);
+	spriteBodyDef.userData = sprite;
+	body = world->CreateBody(&spriteBodyDef);
+
+	b2PolygonShape spriteShape;
+	spriteShape.SetAsBox(sprite->getContentSize().width / PTM_RATIO / 2 * sprite->getScaleX(),
+		sprite->getContentSize().height / PTM_RATIO / 2 * sprite->getScaleY());
+	b2FixtureDef spriteShapeDef;
+	spriteShapeDef.shape = &spriteShape;
+	spriteShapeDef.density = 1.0;
+	spriteShapeDef.isSensor = true;
+	body->CreateFixture(&spriteShapeDef);
+}
+
 //simulates physics every frame and then moves everything in BOX2D , also handles collision
 void Basement::tick()
 {
@@ -318,6 +338,7 @@ void Basement::tick()
 		{
 			if (charUsing)
 			{
+				audio->playEffect("pickup.wav");
 				addItem(2);
 				setHeldItem(2);
 				gasCan->setOpacity(0);
@@ -336,6 +357,7 @@ void Basement::tick()
 		{
 			if (charUsing)
 			{
+				audio->playEffect("pickup.wav");
 				addItem(3);
 				setHeldItem(3);
 				axe->setOpacity(0);
@@ -368,6 +390,7 @@ void Basement::tick()
 
 			if (charUsing)
 			{
+				audio->playEffect("pickup.wav");
 				addItem(6);
 				setHeldItem(6);
 				// keyBottleT->setOpacity(0);
@@ -383,7 +406,7 @@ void Basement::tick()
 		{
 			if (charUsing)
 			{
-				
+				audio->playEffect("pickup.wav");
 				addItem(4);
 				setHeldItem(4);
 				bottle->setOpacity(0);
@@ -419,6 +442,7 @@ void Basement::tick()
 				
 				//crowbar->runAction(moveBy);
 				world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+				audio->playEffect("glassBreak.wav");
 				glass->setOpacity(0);
 				glassBroken = true;
 				//world->DestroyBody(gasCanB);
@@ -428,6 +452,7 @@ void Basement::tick()
 		{
 			if (charUsing)
 			{
+				audio->playEffect("pickup.wav");
 				addItem(7);
 				setHeldItem(7);
 				logs->setOpacity(0);
@@ -515,7 +540,39 @@ void Basement::tick()
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 			}
 		}
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note1)
+		{
+			if (charUsing)
+			{
+				note1Pic->setOpacity(255);
+			}
+			else
+				note1Pic->setOpacity(0);
 
+		}
+
+
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note2)
+		{
+			if (charUsing)
+			{
+				note2Pic->setOpacity(255);
+			}
+			else
+				note2Pic->setOpacity(0);
+
+		}
+
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note3)
+		{
+			if (charUsing)
+			{
+				note3Pic->setOpacity(255);
+			}
+			else
+				note3Pic->setOpacity(0);
+
+		}
 
 		edge = edge->next;
 	}
@@ -808,6 +865,21 @@ bool Basement::init()
 	display5->setOpacity(0);
 	display6->setOpacity(0);
 	display7->setOpacity(0);
+	note1 = rootNode->getChildByName("note1");
+	addBoxBodyForNote(note1, note1B);
+	note2 = rootNode->getChildByName("note2");
+	addBoxBodyForNote(note2, note2B);
+	note3 = rootNode->getChildByName("note3");
+	addBoxBodyForNote(note3, note3B);
+
+	note1Pic = cocos2d::Sprite::create("note1level1.png");
+	note2Pic = cocos2d::Sprite::create("note2level1.png");
+	note3Pic = cocos2d::Sprite::create("note3level1.png");
+	
+	note1Pic->setOpacity(0);
+	note2Pic->setOpacity(0);
+	note3Pic->setOpacity(0);
+
 	//keyBottleT->setOpacity(255);
 	addChild(rootNode);
 	//this->addChild(display);
@@ -818,7 +890,9 @@ bool Basement::init()
 	this->addChild(display5);
 	this->addChild(display6);
 	this->addChild(display7);
-
+	this->addChild(note1Pic);
+	this->addChild(note2Pic);
+	this->addChild(note3Pic);
 	
 	this->scheduleUpdate();
 
@@ -838,7 +912,9 @@ void Basement::update(float delta) {
 	display5->setPosition(sprite->getPositionX()-20 , sprite->getPositionY()-20 );
 	display6->setPosition(sprite->getPositionX()-20 , sprite->getPositionY()-20 );
 	display7->setPosition(sprite->getPositionX()-20 , sprite->getPositionY()-20 );
-
+	note1Pic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
+	note2Pic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
+	note3Pic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
 	key->setPosition(keyBottleT->getPosition());
 	
 	if (gasCanEXP->getOpacity() > 0 && bottleT->getOpacity() > 0 && logsEXP->getOpacity() > 0)
@@ -951,8 +1027,9 @@ void Basement::update(float delta) {
 
 	if (display6->getOpacity() > 0 && thrownBottle == false)
 	{
-		if (charSwing  )
+		if (charUsing)
 		{
+			audio->playEffect("glassBreak.wav");
 			keyBottleBT->SetTransform(spriteBody->GetPosition(), 1);
 			keyBottleT->setOpacity(0);
 			if (movedL)

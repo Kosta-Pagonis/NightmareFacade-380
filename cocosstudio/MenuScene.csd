@@ -97,28 +97,6 @@
             <FileData Type="Normal" Path="Assets/Menu Char.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="desk_2" ActionTag="-1177878170" Tag="14" IconVisible="False" LeftMargin="527.7487" RightMargin="426.2513" TopMargin="263.5862" BottomMargin="290.4138" ctype="SpriteObjectData">
-            <Size X="46.0000" Y="46.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="550.7487" Y="313.4138" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5507" Y="0.5224" />
-            <PreSize X="0.0460" Y="0.0767" />
-            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="exitDoor_3" ActionTag="394386739" Tag="15" IconVisible="False" LeftMargin="527.7487" RightMargin="426.2513" TopMargin="263.5862" BottomMargin="290.4138" ctype="SpriteObjectData">
-            <Size X="46.0000" Y="46.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="550.7487" Y="313.4138" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5507" Y="0.5224" />
-            <PreSize X="0.0460" Y="0.0767" />
-            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
-          </AbstractNodeData>
           <AbstractNodeData Name="idleAnim" ActionTag="-7937630" Tag="39" IconVisible="True" LeftMargin="332.9989" RightMargin="667.0011" TopMargin="468.0000" BottomMargin="132.0000" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
@@ -148,6 +126,17 @@
             <PrePosition X="0.3330" Y="0.2200" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="rightAnimMenu.csd" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="tips" ActionTag="102511530" Alpha="0" Tag="178" IconVisible="False" LeftMargin="298.1010" RightMargin="401.8990" TopMargin="85.5543" BottomMargin="214.4456" ctype="SpriteObjectData">
+            <Size X="300.0000" Y="300.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="448.1010" Y="364.4456" />
+            <Scale ScaleX="0.9619" ScaleY="1.0299" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4481" Y="0.6074" />
+            <PreSize X="0.3000" Y="0.5000" />
+            <FileData Type="Normal" Path="Assets/tips.png" Plist="" />
+            <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

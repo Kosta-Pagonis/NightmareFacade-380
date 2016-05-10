@@ -45,6 +45,8 @@ public:
 	void addBoxBodyForBow(Node * sprite);
 	void addBoxBodyForGateWall(Node* sprite);
 	void addBoxBodyForUpArrowBoiler(Node * sprite);
+	void addBoxBodyForNote(Node * sprite, b2Body * body);
+	void addBoxBodyForNote(Node * sprite);
 
 	void displayInv();
 	
@@ -62,7 +64,7 @@ private:
 	b2World* world;
 	b2ContactListener *contactListener;
 	b2ContactEdge* edge;
-	b2ContactEdge* edgePower;
+	
 	
 	b2Body* floorB;
 	b2Body* leftWallB;
@@ -165,7 +167,19 @@ private:
 	cocos2d::Sprite* fullLever;
 
 
+	Node* note1;
+	b2Body* note1B;
+	Node* note2;
+	b2Body* note2B;
+	Node* note3;
+	b2Body* note3B;
+	Node* note4;
+	b2Body* note4B;
 
+	cocos2d::Sprite* note1Pic;
+	cocos2d::Sprite* note2Pic;
+	cocos2d::Sprite* note3Pic;
+	cocos2d::Sprite* note4Pic;
 	//------------ BOOLS
 	bool charMovingLeft;
 	bool charMovingRight;
@@ -185,7 +199,7 @@ private:
 	bool teleportedChase;
 	bool inLight;
 	bool ghostDied;
-
+	bool destroyLua;
 	//----------- 
 	int id;
 	Node* interactText;
@@ -215,6 +229,11 @@ private:
 	b2Body* lightB;
 	Node* power;
 	b2Body* powerB;
+	Node* exit;
+	b2Body* exitB;
 
 
+	Node* lightening;
+	Node* lighteningSpot;
+	b2Body* lighteningSpotB;
 };

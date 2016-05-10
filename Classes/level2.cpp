@@ -8,6 +8,7 @@
 #include "MenuScene.h"
 #include "level2.h"
 #include "luaplus.h"
+#include "level3.h"
 
 
 using namespace cocostudio::timeline;
@@ -254,6 +255,26 @@ void level2::addBoxBodyForUpArrowBoiler(Node * sprite)
 	spriteShapeDef.density = 1.0;
 	spriteShapeDef.isSensor = true;
 	upArrowBoilerB->CreateFixture(&spriteShapeDef);
+}
+
+void level2::addBoxBodyForNote(Node * sprite, b2Body* body)
+{
+	sprite->setAnchorPoint(Vec2(.5, .5));
+	b2BodyDef spriteBodyDef;
+	spriteBodyDef.type = b2_staticBody;
+	spriteBodyDef.position.Set(sprite->getPositionX() / PTM_RATIO,
+		sprite->getPositionY() / PTM_RATIO);
+	spriteBodyDef.userData = sprite;
+	body = world->CreateBody(&spriteBodyDef);
+
+	b2PolygonShape spriteShape;
+	spriteShape.SetAsBox(sprite->getContentSize().width / PTM_RATIO / 2 * sprite->getScaleX(),
+		sprite->getContentSize().height / PTM_RATIO / 2 * sprite->getScaleY());
+	b2FixtureDef spriteShapeDef;
+	spriteShapeDef.shape = &spriteShape;
+	spriteShapeDef.density = 1.0;
+	spriteShapeDef.isSensor = true;
+	body->CreateFixture(&spriteShapeDef);
 }
 
 //---Library
@@ -587,7 +608,7 @@ void level2::tick()
 	edge = spriteBody->GetContactList();
 	
 	
-	while (edge != NULL && edge->contact != NULL)
+	while (edge != NULL && edge->contact != NULL && destroyLua == false)
 	{
 		if (edge->contact->GetFixtureB()->GetBody() == downArrowBoilerB)
 		{
@@ -660,7 +681,7 @@ void level2::tick()
 				leverTop->setOpacity(0);
 				world->DestroyBody(leverTopB);
 				addItemLv2(5);
-				//setHeldItemLv2(5);
+				setHeldItemLv2(5);
 			}
 		}
 		if (edge->contact->GetFixtureB()->GetBody() == bucketB)
@@ -818,10 +839,31 @@ void level2::tick()
 			else
 			{
 				audioLv2->stopAllEffects();
+				audioLv2->pauseBackgroundMusic();
+				removeItemLv2(1);
+				removeItemLv2(2);
+				removeItemLv2(6);
+				removeItemLv2(8);
+				destroyLua = true;
 				auto scene = NFMenu::createScene();
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 			}
 
+		}
+		if (edge->contact->GetFixtureB()->GetBody() == enemyB)
+		{
+			if (chase == true)
+			{
+				destroyLua = true;
+				removeItemLv2(1);
+				removeItemLv2(2);
+				removeItemLv2(6);
+				removeItemLv2(8);
+				//luaPStateLv2->Destroy(luaPStateLv2);
+				auto scene = level3::createScene();
+				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+
+			}
 		}
 		if (edge->contact->GetFixtureB()->GetBody() == leverMiddleB)
 		{
@@ -900,10 +942,76 @@ void level2::tick()
 				enemy->setOpacity(255);
 				light->setOpacity(30);
 				ghostB->SetLinearVelocity(b2Vec2(-4, 0));
-
+				
 			}
 		}
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == exit)
+		{
+			destroyLua = true;
+			removeItemLv2(1);
+			removeItemLv2(2);
+			removeItemLv2(6);
+			removeItemLv2(8);
+			//luaPStateLv2->Destroy(luaPStateLv2);
+			auto scene = level3::createScene();
+			Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
+		}
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note1)
+		{
+			if (charUsing)
+			{
+				note1Pic->setOpacity(255);
+			}
+			else
+				note1Pic->setOpacity(0);
+
+		}
 		
+
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note2)
+		{
+			if (charUsing)
+			{
+				note2Pic->setOpacity(255);
+			}
+			else
+				note2Pic->setOpacity(0);
+
+		}
+		
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note3)
+		{
+			if (charUsing)
+			{
+				note3Pic->setOpacity(255);
+			}
+			else
+				note3Pic->setOpacity(0);
+
+		}
+		
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == note4)
+		{
+			if (charUsing)
+			{
+				note4Pic->setOpacity(255);
+			}
+			else
+				note4Pic->setOpacity(0);
+
+		}
+		if (edge->contact->GetFixtureB()->GetBody()->GetUserData() == lighteningSpot)
+		{
+			auto action = FadeIn::create(1);
+			auto action2 = FadeOut::create(1);
+			auto seq = Sequence::create(action,action2, nullptr);
+			lightening->runAction(seq);
+			audioLv2->playEffect("thunder.wav");
+			world->DestroyBody(edge->contact->GetFixtureB()->GetBody());
+
+		}
+		
+
 		edge = edge->next;
 	}
 }
@@ -922,7 +1030,10 @@ void level2::displayInv()
 	bucketFullPic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
 	bowPic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
 	fullLever->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
-
+	note1Pic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
+	note2Pic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
+	note3Pic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
+	note4Pic->setPosition(sprite->getPositionX() - 20, sprite->getPositionY() - 20);
 	
 
 	if (id == 1)
@@ -1058,6 +1169,7 @@ void level2::update(float)
 	if (ghostDied == true)
 	{
 		power->setPosition(ghost->getPosition());
+		
 	}
 	else
 		power->setPosition(sprite->getPosition());
@@ -1297,8 +1409,29 @@ bool level2::init()
 	power->setVisible(false);
 	
 	//addBoxBodyForPower(power);
+	note1 = rootNode->getChildByName("note1");
+	addBoxBodyForNote(note1, note1B);
+	note2 = rootNode->getChildByName("note2");
+	addBoxBodyForNote(note2, note2B);
+	note3 = rootNode->getChildByName("note3");
+	addBoxBodyForNote(note3, note3B);
+	note4 = rootNode->getChildByName("note4");
+	addBoxBodyForNote(note4, note4B);
+	exit = rootNode->getChildByName("exit");
+	addBoxBodyForNote(exit, exitB);
+	lightening = rootNode->getChildByName("lightening");
+	lighteningSpot = rootNode->getChildByName("lighteningSpot");
+	addBoxBodyForNote(lighteningSpot, lighteningSpotB);
 
 
+	note1Pic = cocos2d::Sprite::create("note1level2.png");
+	note2Pic = cocos2d::Sprite::create("note2level2.png");
+	note3Pic = cocos2d::Sprite::create("note3level2.png");
+	note4Pic = cocos2d::Sprite::create("note4level2.png");
+	note1Pic->setOpacity(0);
+	note2Pic->setOpacity(0);
+	note3Pic->setOpacity(0);
+	note4Pic->setOpacity(0);
 	rootNode->setOpacity(255);
 	
 	this->addChild(rootNode);
@@ -1311,6 +1444,10 @@ bool level2::init()
 	this->addChild(bucketEmptyPic);
 	this->addChild(bucketFullPic);
 	this->addChild(bowPic);
+	this->addChild(note1Pic);
+	this->addChild(note2Pic);
+	this->addChild(note3Pic);
+	this->addChild(note4Pic);
 	
 	
 	//------------------------DEBUGGER

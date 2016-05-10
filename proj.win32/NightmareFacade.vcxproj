@@ -154,6 +154,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\GLES-Render.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\level2.cpp" />
+    <ClCompile Include="..\Classes\level3.cpp" />
     <ClCompile Include="..\Classes\MenuScene.cpp" />
     <ClCompile Include="Apps\LuaExample\LuaMathExample\LuaMathExample.cpp" />
     <ClCompile Include="main.cpp" />
@@ -164,6 +165,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\GLES-Render.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\level2.h" />
+    <ClInclude Include="..\Classes\level3.h" />
     <ClInclude Include="..\Classes\MenuScene.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
