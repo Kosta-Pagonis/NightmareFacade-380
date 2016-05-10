@@ -265,7 +265,7 @@ eventListener->onKeyPressed = [this](EventKeyboard::KeyCode keyCode, Event* even
 				auto scene = level2::createScene();
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0, 0, 0)));
 		}
-		
+		break;
 	case EventKeyboard::KeyCode::KEY_3:
 		if (playLit)
 		{
